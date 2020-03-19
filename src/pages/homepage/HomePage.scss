@@ -1,0 +1,152 @@
+.hero-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 10vh;
+  overflow: hidden;
+}
+
+.hero-section {
+  max-width: 100vw;
+  margin: 0 auto;
+  padding-top: 10vh;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-left {
+  align-self: center;
+  justify-self: center;
+  padding-left: 8vw;
+  h2 {
+    font-size: 42px;
+    font-weight: normal;
+    color: rgba(26, 26, 26, 0.55);
+    span {
+      font-size: 72px;
+      font-weight: bold;
+      color: rgba(26, 26, 26, 0.75);
+    }
+  }
+  h4 {
+    font-size: 24px;
+    color: rgba(26, 26, 26, 0.55);
+    margin-bottom: 1.3rem;
+  }
+  p {
+    font-size: 30px;
+    font-family: "Marvel", sans-serif;
+    width: 50vw;
+    position: relative;
+  }
+}
+
+.hero-right {
+  .hero-img {
+    transition: all 0.2s ease-in-out;
+    img {
+      max-width: 693px;
+      max-height: 750px;
+      z-index: 10;
+      margin: 5vh;
+      padding: -5vh 0 0 -5vw;
+      transition: all 0.2s ease-in-out;
+      transform: scale(1) translateY(3vh);
+    }
+    position: relative;
+  }
+  svg {
+    position: absolute;
+    z-index: -5;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.8) translateX(-6vw) translateY(-30vh);
+    // width: 893px;
+  }
+}
+.hero-img:hover {
+  transform: scale(1.2);
+
+  svg {
+    transform: scale(1.4);
+  }
+}
+
+.hero-button-group {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  margin: 5vh 0;
+  position: relative;
+
+  .project-button {
+    align-self: center;
+    justify-self: center;
+    width: 155px;
+    height: 51px;
+    background-color: #3845b9;
+    color: #ffffff;
+    font-size: 24px;
+    border: none;
+    box-shadow: 6px 4px 16px -2px rgba(134, 143, 179, 1);
+  }
+  .contact-button {
+    align-self: center;
+    justify-self: center;
+    width: 155px;
+    height: 51px;
+    background-color: #ffffff;
+    color: #3845b9;
+    font-size: 24px;
+    border: 1px black solid;
+    box-shadow: 6px 4px 16px -2px rgba(0, 0, 0, 0.22);
+  }
+}
+
+.lines-dot {
+  position: absolute;
+  top: -25vh;
+  left: -10vw;
+  z-index: -10;
+}
+
+.orange-circle {
+  position: absolute;
+  z-index: -10;
+  top: 0vh;
+  left: -5vw;
+}
+.two-crosses {
+  position: absolute;
+  z-index: -10;
+}
+.purple-square {
+  position: absolute;
+  z-index: -10;
+  top: 0vh;
+  left: 10vw;
+}
+.wave-1 {
+  position: absolute;
+  bottom: -50vh;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -15;
+  overflow: hidden;
+  // svg {
+  //   width: 100%;
+  //   // height: 100%;
+  // }
+}
+
+.wave-2 {
+  position: absolute;
+  overflow: hidden;
+  bottom: -60vh;
+  left: -0vw;
+  width: 100%;
+  height: 100%;
+  z-index: -15;
+}
