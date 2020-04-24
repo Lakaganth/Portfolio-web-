@@ -1,44 +1,82 @@
 import React from "react";
 import NavLogo from "../../../assets/images/navlogo.svg";
 import { NavLink } from "react-router-dom";
-
+import { Waypoint } from "react-waypoint";
+import { animated, useSpring } from "react-spring";
 import styled from "styled-components";
 
 const NavBar = () => {
-  const Container = styled.div`
-    height: 10vh;
-    position: fixed;
-    width: 60%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    z-index: 50;
-    font-size: 1.6rem;
+  const [hasScrolled, setHasScrolled] = React.useState(false);
 
-    a {
-      color: black;
-      font-family: "Marvel", sans-serif;
-    }
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, []);
 
-    .nav-logo {
-      width: 55px;
-      height: 55px;
+  const handleScroll = e => {
+    const scrollTop = window.pageYOffset;
+    if (scrollTop > 100) {
+      setHasScrolled(true);
+    } else {
+      setHasScrolled(false);
     }
-  `;
+  };
+
   return (
-    <Container>
-      <NavLink to="/">
-        <div className="nav-logo">
-          <img src={NavLogo} alt="Nav logo" />
-        </div>
-      </NavLink>
-      <NavLink to="/about">About</NavLink>
-      <NavLink to="/projects">Projects</NavLink>
-      <NavLink to="/contact">Contact</NavLink>
-      <NavLink to="/blog">Blog</NavLink>
+    <Container hasScrolled={hasScrolled}>
+      <Grids>
+        <NavLink to="/">
+          <div className="nav-logo">
+            <img src={NavLogo} alt="Nav logo" />
+          </div>
+        </NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/projects">Projects</NavLink>
+        <NavLink to="/blog">Blog</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
+      </Grids>
     </Container>
   );
 };
 
 export default NavBar;
+
+const Container = styled(animated.div)`
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+
+  margin: 0 auto;
+  ${({ hasScrolled }) =>
+    hasScrolled &&
+    `background-color: rgba(0,0,0,.3);
+  
+`}
+  z-index: 50;
+  font-size: 1.6rem;
+
+  a {
+    color: black;
+    font-family: "Marvel", sans-serif;
+    ${({ hasScrolled }) =>
+      hasScrolled &&
+      `color: white;      
+`}
+  }
+
+  .nav-logo {
+    width: 70px;
+    height: 70px;
+    padding-top: 10px;
+  }
+`;
+
+const Grids = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  align-items: center;
+  justify-items: center;
+`;

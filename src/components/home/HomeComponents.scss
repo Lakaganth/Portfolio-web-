@@ -1,0 +1,17 @@
+.exp-col {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+
+.left-col {
+  align-self: center;
+  justify-self: center;
+}
+
+.coffee {
+  transform: translate3d(30vw, -18vh, 0);
+}
+
+.headphones {
+  transform: translate3d(10vw, -18vh, 0);
+}
