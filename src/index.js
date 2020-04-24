@@ -8,15 +8,17 @@ import { combineReducers, createStore, applyMiddleware } from "redux";
 import ReduxThunk from "redux-thunk";
 import { Provider, useDispatch } from "react-redux";
 import BlogReducers from "./store/reducers/BlogReducers";
+import ScrollToTop from "./scrollToTop";
 
 const rootReducer = combineReducers({
-  blog: BlogReducers
+  blog: BlogReducers,
 });
 const store = createStore(rootReducer, applyMiddleware(ReduxThunk));
 
 ReactDOM.render(
   <Router>
     <Provider store={store}>
+      <ScrollToTop />
       <App />
     </Provider>
   </Router>,

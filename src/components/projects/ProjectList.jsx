@@ -1,7 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-const ProjectList = ({ type, tech, img, techArr, name, desc, bgColor }) => {
+const ProjectList = ({
+  type,
+  tech,
+  img,
+  techArr,
+  name,
+  desc,
+  bgColor,
+  routeName,
+}) => {
   console.log(bgColor);
   return (
     <Container>
@@ -24,7 +34,9 @@ const ProjectList = ({ type, tech, img, techArr, name, desc, bgColor }) => {
               </div>
             ))}
           </TechTablets>
-          <ReadButton>Read More</ReadButton>
+          <ReadButton>
+            <Link to={`/projects/${routeName}`}>Read More</Link>
+          </ReadButton>
         </HeroMore>
       </Hero>
       <Content>
@@ -183,6 +195,9 @@ const ReadButton = styled.button`
   height: 42px;
   color: #fff;
   font-size: 24px;
+  a {
+    color: #fff;
+  }
 `;
 
 //  <div class="center">

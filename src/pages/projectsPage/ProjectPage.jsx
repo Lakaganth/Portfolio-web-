@@ -23,6 +23,7 @@ export const ProjectPage = () => {
           img={Samengine}
           techArr={samTechArr}
           name={"Sam Auto"}
+          routeName={"sansa"}
           desc={
             "Server side rendered website for the client Sam Auto in Toronto. A          dynamic website created using NextJs."
           }
@@ -34,6 +35,7 @@ export const ProjectPage = () => {
           img={SosAdmin}
           techArr={samTechArr}
           name={"SOS - Admin App"}
+          routeName={"sansa"}
           desc={
             "Server side rendered website for the client Sam Auto in Toronto. A          dynamic website created using NextJs."
           }
@@ -46,6 +48,7 @@ export const ProjectPage = () => {
           img={SansaRec}
           techArr={samTechArr}
           name={"Sansa Kitchen"}
+          routeName={"sansa"}
           desc={
             "Server side rendered website for the client Sam Auto in Toronto. A          dynamic website created using NextJs."
           }
@@ -57,6 +60,7 @@ export const ProjectPage = () => {
           img={Inventory}
           techArr={samTechArr}
           name={"Inventory Manager"}
+          routeName={"sansa"}
           desc={
             "Server side rendered website for the client Sam Auto in Toronto. A          dynamic website created using NextJs."
           }
@@ -68,6 +72,7 @@ export const ProjectPage = () => {
           img={Sos}
           techArr={samTechArr}
           name={"School of Sports"}
+          routeName={"sansa"}
           desc={
             "Server side rendered website for the client Sam Auto in Toronto. A          dynamic website created using NextJs."
           }
@@ -79,6 +84,7 @@ export const ProjectPage = () => {
           img={Petsgram}
           techArr={samTechArr}
           name={"Petsgram"}
+          routeName={"sansa"}
           desc={
             "Server side rendered website for the client Sam Auto in Toronto. A          dynamic website created using NextJs."
           }
