@@ -247,7 +247,7 @@ export const Petsgram = () => {
 export const ProjectHero = styled.div`
   background: linear-gradient(243.17deg, #c3e6e2 1.45%, #8de4ff 100.05%);
   width: 100vw;
-  padding: 15vh 0;
+  padding: 10vh 0;
 `;
 
 export const ProjHeroGrid = styled.div`
@@ -261,7 +261,7 @@ export const ProjHeroGrid = styled.div`
   }
   .hero-vid {
     justify-self: flex-end;
-    align-self: flex-end;
+    align-self: center;
 
     .youtube {
       border-radius: 10px;
