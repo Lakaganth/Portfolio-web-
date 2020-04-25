@@ -14,22 +14,23 @@ import {
 import { Waypoint } from "react-waypoint";
 import { animated, useSpring } from "react-spring";
 
-import HeroImg from "../../assets/images/Projects/sansakitchen/hero.png";
-import IntroImage from "../../assets/images/Projects/sansakitchen/intro-image.png";
-import ShowcaseBG from "../../assets/images/Projects/sansakitchen/showcasebg1.png";
+import HeroImg from "../../assets/images/Projects/inventory/hero.png";
+import IntroImage from "../../assets/images/Projects/inventory/intro-image.png";
+import ShowcaseBG from "../../assets/images/Projects/inventory/showcase-bg.png";
+import ShowcaseScreeen from "../../assets/images/Projects/inventory/showcase-screen.png";
 import Native from "../../assets/images/Projects/sansakitchen/native.svg";
 import Redux from "../../assets/images/Projects/sansakitchen/redux.svg";
-import Styled from "../../assets/images/Projects/sansakitchen/styled.svg";
-import Firebase from "../../assets/images/Projects/sansakitchen/firebase.svg";
-import Feature1Img from "../../assets/images/Projects/sansakitchen/feature1.png";
-import Feature21Img from "../../assets/images/Projects/sansakitchen/feature2-1.png";
-import Feature22Img from "../../assets/images/Projects/sansakitchen/feature2-2.png";
-import Feature3Img from "../../assets/images/Projects/sansakitchen/feature3.png";
+import AWS from "../../assets/images/Projects/inventory/aws.png";
+import Expo from "../../assets/images/Projects/inventory/expo.png";
+import Feature1Img from "../../assets/images/Projects/inventory/feature1.png";
+import Feature21Img from "../../assets/images/Projects/inventory/feature2-1.png";
+import Feature22Img from "../../assets/images/Projects/inventory/feature2-2.png";
+import Feature3Img from "../../assets/images/Projects/inventory/feature3.png";
 import Feature41Img from "../../assets/images/Projects/sansakitchen/feature4-1.png";
 import Feature42Img from "../../assets/images/Projects/sansakitchen/feature4-2.png";
 import Feature43Img from "../../assets/images/Projects/sansakitchen/feature4-3.png";
 
-export const SansaKitchen = () => {
+export const PaInventory = () => {
   const [animF1, setAnimF1] = useState(false);
   const [animF2, setAnimF2] = useState(false);
   const [animF4, setAnimF4] = useState(false);
@@ -37,22 +38,22 @@ export const SansaKitchen = () => {
   const F1Animation = useSpring({
     opacity: animF1 ? 1 : 0,
     transform: animF1
-      ? "translate3d(-100px, 20px, 0) rotateY(0deg)"
-      : "translate3d(-300px, 60px, 0) rotateY(180deg)",
+      ? "translate3d(-100px, 20px, 0) "
+      : "translate3d(-300px, 60px, 0) ",
     scale: animF1 ? 1 : 1.5,
   });
   const F21Animation = useSpring({
     opacity: animF2 ? 1 : 0,
     transform: animF2
       ? "translate3d(-100px, 220px, 0)"
-      : "translate3d(280px, 60px, 0)",
+      : "translate3d(280px, -360px, 0)",
     scale: animF2 ? 1 : 1.5,
   });
   const F22Animation = useSpring({
     opacity: animF2 ? 1 : 0,
     transform: animF2
       ? "translate3d(160px, -220px, 0)"
-      : "translate3d(280px, 60px, 0)",
+      : "translate3d(0px, 360px, 0)",
     scale: animF2 ? 1 : 1.5,
   });
 
@@ -76,7 +77,7 @@ export const SansaKitchen = () => {
       <ProjectHero>
         <ProjectTitle>
           <h3>
-            Sansa <br /> Kitchen
+            PA Inventory <br /> Manager
           </h3>
           <h6>Mobile App</h6>
         </ProjectTitle>
@@ -84,7 +85,7 @@ export const SansaKitchen = () => {
           <div className="hero-vid">
             <div className="youtube">
               <YouTube
-                videoId="3PXl87pBnRc"
+                videoId="PIz9eyAkYIA"
                 opts={opts}
                 //   onReady={this._onReady}
               />
@@ -105,7 +106,7 @@ export const SansaKitchen = () => {
       </ProjectHero>
       <ProjectIntro>
         <div className="intro-image">
-          <img src={IntroImage} alt="Sam Auto" />
+          <img src={IntroImage} alt="Inventory" />
         </div>
         <div className="intro-text">
           <p>
@@ -125,31 +126,31 @@ export const SansaKitchen = () => {
         </div>
       </ProjectIntro>
       <ScreenShowcase>
-        <img className="app-screens" src={ShowcaseBG} alt="Sansa Screens" />
-        {/* <img className="green-circle" src={GreenCircle} alt="green-circle" />
-        <img className="red-circle" src={RedCircle} alt="red-circle" />
-        <img className="green-pacman" src={GreenPacman} alt="green-packman" />
-        <img className="star" src={Star} alt="star" /> */}
+        <img className="bg-screens" src={ShowcaseBG} alt="Sansa Screens" />
+        <img
+          className="app-screens"
+          src={ShowcaseScreeen}
+          alt="ShowcaseScreeen"
+        />
       </ScreenShowcase>
       <Packages>
         <p className="package-title">Packages</p>
         <div className="icon-list">
           <div className="native">
-            <img src={Native} alt="Native" />
-
+            <img src={Native} alt="Native" style={{ width: "160%" }} />
             <p>React Native</p>
           </div>
-          <div className="styled">
-            <img src={Styled} alt="styled" />
-            <p>Styled Components</p>
+          <div className="aws" style={{ height: "40%" }}>
+            <img src={AWS} alt="AWS" />
+            <p>AWS</p>
           </div>
           <div className="redux">
-            <img src={Redux} alt="Redux" />
+            <img src={Redux} alt="Redux" style={{ width: "160%" }} />
             <p>Redux</p>
           </div>
-          <div className="firebase">
-            <img src={Firebase} alt="firebase" />
-            <p>Redux</p>
+          <div className="expo">
+            <img src={Expo} alt="Expo" style={{ width: "80%" }} />
+            <p>Expo</p>
           </div>
         </div>
       </Packages>
@@ -263,9 +264,9 @@ export const SansaKitchen = () => {
 };
 
 export const ProjectHero = styled.div`
-  background: #bfe1f4;
+  background: #acf0ff;
   width: 100vw;
-  /* height: 115vh; */
+
   padding: 15vh 0;
 `;
 
@@ -290,16 +291,17 @@ export const ProjHeroGrid = styled.div`
       height: 390px;
       width: 680px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin-top: 50px;
     }
   }
 `;
 
 export const ProjectIntro = styled.div`
-  height: 80vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: center;
+  margin: 5vh 0;
 
   .intro-text {
     width: 90%;
@@ -319,41 +321,23 @@ export const ProjectIntro = styled.div`
 
 export const ScreenShowcase = styled.div`
   width: 100vw;
-  /* height: 120vh; */
-  background: url("../../assets/images/Projects/sansakitchen/showcasebg.png")
-    cover;
+  /* height: 100vh; */
   position: relative;
-  .app-screens {
-    /* padding-left: 20vw; */
-    z-index: 5;
+
+  .bg-screens {
     width: 100%;
-    /* position: absolute; */
   }
-  .green-circle {
+  .app-screens {
+    z-index: 5;
+    width: 80%;
     position: absolute;
-    top: 0;
-    left: 20vw;
-    max-width: 75%;
-  }
-  .red-circle {
-    position: absolute;
-    bottom: 0;
-    left: 20vw;
-  }
-  .green-pacman {
-    position: absolute;
-    bottom: 10vh;
-    right: 20vw;
-  }
-  .star {
-    position: absolute;
-    top: 15vh;
-    right: 15vw;
+    top: 20vh;
+    left: 10vw;
   }
 `;
 
 export const Packages = styled.div`
-  padding: 0 00 10vh 0;
+  padding: 5vh 00 10vh 0;
 
   .package-title {
     font-family: Monda;
@@ -377,11 +361,10 @@ export const Packages = styled.div`
     }
   }
 `;
-
 export const Feature1 = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background: #68ff5b;
+  background: #58e1ff;
   padding: 5vh 0;
   justify-items: center;
   align-items: center;
@@ -411,6 +394,7 @@ export const Feature1 = styled.div`
     padding: 2vh 0;
   }
 `;
+
 export const Feature2 = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -442,10 +426,11 @@ export const Feature2 = styled.div`
     padding: 2vh 0;
   }
 `;
+
 export const Feature3 = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background: #d2ef67;
+  background: #1e57ac;
   /* padding: 5vh 0; */
   justify-items: center;
   align-items: center;
@@ -457,7 +442,7 @@ export const Feature3 = styled.div`
     line-height: 65px;
     text-align: center;
     letter-spacing: 0.155em;
-    color: #1b1b1d;
+    color: #fff;
     padding: 1.5vh 0;
   }
   p {
@@ -468,7 +453,7 @@ export const Feature3 = styled.div`
     line-height: 39px;
     text-align: center;
     letter-spacing: 0.005em;
-    color: #000000;
+    color: #fff;
     padding: 5vh 5vw;
   }
   img {

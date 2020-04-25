@@ -60,7 +60,7 @@ export const ProjectPage = () => {
           img={Inventory}
           techArr={samTechArr}
           name={"Inventory Manager"}
-          routeName={"sansa"}
+          routeName={"inventory"}
           desc={
             "Server side rendered website for the client Sam Auto in Toronto. A          dynamic website created using NextJs."
           }
@@ -84,7 +84,7 @@ export const ProjectPage = () => {
           img={Petsgram}
           techArr={samTechArr}
           name={"Petsgram"}
-          routeName={"sansa"}
+          routeName={"petsgram"}
           desc={
             "Server side rendered website for the client Sam Auto in Toronto. A          dynamic website created using NextJs."
           }

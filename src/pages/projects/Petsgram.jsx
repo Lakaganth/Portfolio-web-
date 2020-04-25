@@ -14,22 +14,21 @@ import {
 import { Waypoint } from "react-waypoint";
 import { animated, useSpring } from "react-spring";
 
-import HeroImg from "../../assets/images/Projects/sansakitchen/hero.png";
-import IntroImage from "../../assets/images/Projects/sansakitchen/intro-image.png";
-import ShowcaseBG from "../../assets/images/Projects/sansakitchen/showcasebg1.png";
-import Native from "../../assets/images/Projects/sansakitchen/native.svg";
-import Redux from "../../assets/images/Projects/sansakitchen/redux.svg";
-import Styled from "../../assets/images/Projects/sansakitchen/styled.svg";
+import HeroImg from "../../assets/images/Projects/petsgram/hero.png";
+import IntroImage from "../../assets/images/Projects/petsgram/intro-image.png";
+import ShowcaseScreeen from "../../assets/images/Projects/petsgram/showcase-screen.png";
 import Firebase from "../../assets/images/Projects/sansakitchen/firebase.svg";
-import Feature1Img from "../../assets/images/Projects/sansakitchen/feature1.png";
-import Feature21Img from "../../assets/images/Projects/sansakitchen/feature2-1.png";
-import Feature22Img from "../../assets/images/Projects/sansakitchen/feature2-2.png";
-import Feature3Img from "../../assets/images/Projects/sansakitchen/feature3.png";
+import Flutter from "../../assets/images/Projects/petsgram/flutter.png";
+
+import Feature1Img from "../../assets/images/Projects/petsgram/feature1.png";
+import Feature2Img from "../../assets/images/Projects/petsgram/feature2.png";
+import Feature3Img from "../../assets/images/Projects/petsgram/feature3.png";
 import Feature41Img from "../../assets/images/Projects/sansakitchen/feature4-1.png";
 import Feature42Img from "../../assets/images/Projects/sansakitchen/feature4-2.png";
 import Feature43Img from "../../assets/images/Projects/sansakitchen/feature4-3.png";
+import Footer from "./../../components/UI/footer/Footer";
 
-export const SansaKitchen = () => {
+export const Petsgram = () => {
   const [animF1, setAnimF1] = useState(false);
   const [animF2, setAnimF2] = useState(false);
   const [animF4, setAnimF4] = useState(false);
@@ -37,22 +36,16 @@ export const SansaKitchen = () => {
   const F1Animation = useSpring({
     opacity: animF1 ? 1 : 0,
     transform: animF1
-      ? "translate3d(-100px, 20px, 0) rotateY(0deg)"
-      : "translate3d(-300px, 60px, 0) rotateY(180deg)",
+      ? "translate3d(-0px,px, 0) "
+      : "translate3d(-300px, px, 0) ",
     scale: animF1 ? 1 : 1.5,
   });
+
   const F21Animation = useSpring({
     opacity: animF2 ? 1 : 0,
     transform: animF2
-      ? "translate3d(-100px, 220px, 0)"
-      : "translate3d(280px, 60px, 0)",
-    scale: animF2 ? 1 : 1.5,
-  });
-  const F22Animation = useSpring({
-    opacity: animF2 ? 1 : 0,
-    transform: animF2
-      ? "translate3d(160px, -220px, 0)"
-      : "translate3d(280px, 60px, 0)",
+      ? "translate3d(0px, 0px, 0)"
+      : "translate3d(0px, 60px, 0)",
     scale: animF2 ? 1 : 1.5,
   });
 
@@ -75,16 +68,14 @@ export const SansaKitchen = () => {
     <Container>
       <ProjectHero>
         <ProjectTitle>
-          <h3>
-            Sansa <br /> Kitchen
-          </h3>
+          <h3>Petsgram</h3>
           <h6>Mobile App</h6>
         </ProjectTitle>
         <ProjHeroGrid>
           <div className="hero-vid">
             <div className="youtube">
               <YouTube
-                videoId="3PXl87pBnRc"
+                videoId="IF8hvSjnp6E"
                 opts={opts}
                 //   onReady={this._onReady}
               />
@@ -99,13 +90,13 @@ export const SansaKitchen = () => {
             </ButtonGroup>
           </div>
           <div className="hero-image">
-            <img src={HeroImg} alt="Sansa Kitchen" />
+            <img src={HeroImg} alt="Petsgram" />
           </div>
         </ProjHeroGrid>
       </ProjectHero>
       <ProjectIntro>
         <div className="intro-image">
-          <img src={IntroImage} alt="Sam Auto" />
+          <img src={IntroImage} alt="Petsgram Into" />
         </div>
         <div className="intro-text">
           <p>
@@ -125,43 +116,32 @@ export const SansaKitchen = () => {
         </div>
       </ProjectIntro>
       <ScreenShowcase>
-        <img className="app-screens" src={ShowcaseBG} alt="Sansa Screens" />
-        {/* <img className="green-circle" src={GreenCircle} alt="green-circle" />
-        <img className="red-circle" src={RedCircle} alt="red-circle" />
-        <img className="green-pacman" src={GreenPacman} alt="green-packman" />
-        <img className="star" src={Star} alt="star" /> */}
+        <img
+          className="app-screens"
+          src={ShowcaseScreeen}
+          alt="ShowcaseScreeen"
+        />
       </ScreenShowcase>
       <Packages>
         <p className="package-title">Packages</p>
         <div className="icon-list">
           <div className="native">
-            <img src={Native} alt="Native" />
-
-            <p>React Native</p>
+            <img src={Flutter} alt="Flutter" style={{ width: "70%" }} />
+            <p>Flutter</p>
           </div>
-          <div className="styled">
-            <img src={Styled} alt="styled" />
-            <p>Styled Components</p>
-          </div>
-          <div className="redux">
-            <img src={Redux} alt="Redux" />
-            <p>Redux</p>
-          </div>
-          <div className="firebase">
+          <div className="firebase" style={{ height: "40%" }}>
             <img src={Firebase} alt="firebase" />
-            <p>Redux</p>
+            <p>Firebase</p>
           </div>
         </div>
       </Packages>
-      <Waypoint bottomOffset="70%" onEnter={() => setAnimF1(true)} />
+      <Waypoint bottomOffset="40%" onEnter={() => setAnimF1(true)} />
       <Feature1>
-        <animated.div className="feature1-image" style={F1Animation}>
-          <img src={Feature1Img} alt="Feature1" />
-        </animated.div>
         <div className="feature1-text">
           <h6>
-            Powered by <br />
-            React Native
+            Flutter
+            <br />
+            Awesomeness
           </h6>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -178,9 +158,18 @@ export const SansaKitchen = () => {
             Ipsum.
           </p>
         </div>
+        <animated.div className="feature1-image" style={F1Animation}>
+          <img src={Feature1Img} alt="Feature1" />
+        </animated.div>
       </Feature1>
       <Waypoint bottomOffset="90%" onEnter={() => setAnimF2(true)} />
+
       <Feature2>
+        <div className="feature2-image">
+          <animated.div style={F21Animation}>
+            <img src={Feature2Img} alt="Feature2" />
+          </animated.div>
+        </div>
         <div className="feature2-text">
           <h6>
             Firebase and
@@ -202,19 +191,8 @@ export const SansaKitchen = () => {
             Ipsum.
           </p>
         </div>
-        <div className="feature2-image">
-          <animated.div style={F21Animation}>
-            <img src={Feature21Img} alt="Feature21" />
-          </animated.div>
-          <animated.div style={F22Animation}>
-            <img src={Feature22Img} alt="Feature22" />
-          </animated.div>
-        </div>
       </Feature2>
       <Feature3>
-        <div className="feature3-image">
-          <img src={Feature3Img} alt="Feature3" />
-        </div>
         <div className="feature3-text">
           <h6>
             Firebase and
@@ -236,18 +214,12 @@ export const SansaKitchen = () => {
             Ipsum.
           </p>
         </div>
+        <div className="feature3-image">
+          <img src={Feature3Img} alt="Feature3" />
+        </div>
       </Feature3>
       <Waypoint bottomOffset="50%" onEnter={() => setAnimF4(true)} />
       <Feature4>
-        <div className="feature4-text">
-          <h6>Profile Screen</h6>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </p>
-        </div>
         <div className="feature4-image">
           <animated.div style={F42Animation}>
             <img src={Feature42Img} alt="feature42" className="feature42" />
@@ -257,15 +229,24 @@ export const SansaKitchen = () => {
             <img src={Feature43Img} alt="feature43" className="feature43" />
           </animated.div>
         </div>
+        <div className="feature4-text">
+          <h6>Profile Screen</h6>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </div>
       </Feature4>
+      <Footer />
     </Container>
   );
 };
 
 export const ProjectHero = styled.div`
-  background: #bfe1f4;
+  background: linear-gradient(243.17deg, #c3e6e2 1.45%, #8de4ff 100.05%);
   width: 100vw;
-  /* height: 115vh; */
   padding: 15vh 0;
 `;
 
@@ -275,9 +256,8 @@ export const ProjHeroGrid = styled.div`
   justify-content: center;
   align-items: center;
 
-  .hero-vid,
   .hero-image {
-    justify-self: center;
+    justify-self: end;
   }
   .hero-vid {
     justify-self: flex-end;
@@ -290,16 +270,18 @@ export const ProjHeroGrid = styled.div`
       height: 390px;
       width: 680px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin-top: 50px;
     }
   }
 `;
 
 export const ProjectIntro = styled.div`
-  height: 80vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: center;
+  padding: 5vh 0;
+  background: #e3e3e3;
 
   .intro-text {
     width: 90%;
@@ -319,41 +301,22 @@ export const ProjectIntro = styled.div`
 
 export const ScreenShowcase = styled.div`
   width: 100vw;
-  /* height: 120vh; */
-  background: url("../../assets/images/Projects/sansakitchen/showcasebg.png")
-    cover;
+  /* height: 100vh; */
   position: relative;
-  .app-screens {
-    /* padding-left: 20vw; */
-    z-index: 5;
+  background: linear-gradient(232.95deg, #83c0f8 -3.11%, #d665e0 103.11%);
+
+  .bg-screens {
     width: 100%;
-    /* position: absolute; */
   }
-  .green-circle {
-    position: absolute;
-    top: 0;
-    left: 20vw;
-    max-width: 75%;
-  }
-  .red-circle {
-    position: absolute;
-    bottom: 0;
-    left: 20vw;
-  }
-  .green-pacman {
-    position: absolute;
-    bottom: 10vh;
-    right: 20vw;
-  }
-  .star {
-    position: absolute;
-    top: 15vh;
-    right: 15vw;
+  .app-screens {
+    z-index: 5;
+    width: 80%;
+    padding: 10vh 0 5vh 25vw;
   }
 `;
 
 export const Packages = styled.div`
-  padding: 0 00 10vh 0;
+  padding: 5vh 00 10vh 0;
 
   .package-title {
     font-family: Monda;
@@ -368,7 +331,7 @@ export const Packages = styled.div`
   }
   .icon-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     p {
       font-size: 24px;
@@ -381,7 +344,7 @@ export const Packages = styled.div`
 export const Feature1 = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background: #68ff5b;
+  background: #4fc5ed;
   padding: 5vh 0;
   justify-items: center;
   align-items: center;
@@ -393,7 +356,7 @@ export const Feature1 = styled.div`
     line-height: 65px;
     text-align: center;
     letter-spacing: 0.155em;
-    color: #1b1b1d;
+    color: #fff;
     padding: 1.5vh 0;
   }
   p {
@@ -404,13 +367,14 @@ export const Feature1 = styled.div`
     line-height: 39px;
     text-align: center;
     letter-spacing: 0.005em;
-    color: #000000;
+    color: #fff;
     padding: 1.5vh 5vw;
   }
   img {
     padding: 2vh 0;
   }
 `;
+
 export const Feature2 = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -439,13 +403,14 @@ export const Feature2 = styled.div`
     padding: 1.5vh 5vw;
   }
   img {
-    padding: 2vh 0;
+    padding: 0vh 0;
   }
 `;
+
 export const Feature3 = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background: #d2ef67;
+  background: #fff48c;
   /* padding: 5vh 0; */
   justify-items: center;
   align-items: center;
@@ -457,8 +422,9 @@ export const Feature3 = styled.div`
     line-height: 65px;
     text-align: center;
     letter-spacing: 0.155em;
-    color: #1b1b1d;
+    color: #000;
     padding: 1.5vh 0;
+    padding-left: 10vw;
   }
   p {
     font-family: Monda;
@@ -468,8 +434,9 @@ export const Feature3 = styled.div`
     line-height: 39px;
     text-align: center;
     letter-spacing: 0.005em;
-    color: #000000;
+    color: #000;
     padding: 5vh 5vw;
+    padding-left: 10vw;
   }
   img {
     /* padding: 2vh 0; */

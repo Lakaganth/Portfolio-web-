@@ -14,6 +14,8 @@ import BlogDetail from "./components/blog/BlogDetail";
 import NavBar from "./components/UI/navbar/NavBar";
 import SamAuto from "./pages/projects/SamAuto";
 import { SansaKitchen } from "./pages/projects/SansaKitchen";
+import { PaInventory } from "./pages/projects/PaInventory";
+import { Petsgram } from "./pages/projects/Petsgram";
 
 const App = withRouter(() => {
   const location = useLocation();
@@ -23,33 +25,9 @@ const App = withRouter(() => {
     leave: { opacity: 0, transform: "translate3d(-50%,0,0)" },
   });
 
-  // return (
-  //   <div>
-  //     <NavBar />
-  // <Switch location={location}>
-  //   <Route exact path="/" component={HomePage} />
-  //   <Route path="/about" component={AboutPage} />
-  //   <Route path="/projects" component={ProjectPage} />
-  //   <Route path="/contact" component={ContactPage} />
-  //   <Route exact path="/blog" component={BlogPage} />
-  //   <Route path="/blog/add" component={AddBlog} />
-  //   <Route path="/blog/detail" component={BlogDetail} />
-  // </Switch>
-  //   </div>
-  // );
-
   return (
     <div>
       <NavBar />
-      {/* <Switch location={location}>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/about" component={AboutPage} />
-        <Route path="/projects" component={ProjectPage} />
-        <Route path="/contact" component={ContactPage} />
-        <Route exact path="/blog" component={BlogPage} />
-        <Route path="/blog/add" component={AddBlog} />
-        <Route path="/blog/detail" component={BlogDetail} />
-      </Switch> */}
       {transitions.map(({ item: location, props, key }) => (
         <animated.div key={key} style={props}>
           <Switch location={location}>
@@ -62,6 +40,8 @@ const App = withRouter(() => {
             <Route path="/blog/detail" component={BlogDetail} />
             <Route path="/projects/samauto" component={SamAuto} />
             <Route path="/projects/sansa" component={SansaKitchen} />
+            <Route path="/projects/inventory" component={PaInventory} />
+            <Route path="/projects/petsgram" component={Petsgram} />
           </Switch>
         </animated.div>
       ))}

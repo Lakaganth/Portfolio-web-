@@ -7,6 +7,7 @@ import {
   ProjectHero,
   ProjHeroGrid,
   ProjIntro,
+  opts,
 } from "./ProjectStyles";
 import HeroImg from "../../assets/images/Projects/samauto/heroimg.png";
 import ProjIntroImg from "../../assets/images/Projects/samauto/projintro.png";
@@ -15,15 +16,6 @@ import Showcase from "../../assets/images/Projects/samauto/showcase.png";
 import YouTube from "react-youtube";
 
 const SamAuto = () => {
-  const opts = {
-    height: "390",
-    width: "680",
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
-    },
-  };
-
   return (
     <Container>
       <ProjectHero>

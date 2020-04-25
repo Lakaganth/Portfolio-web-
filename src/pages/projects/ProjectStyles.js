@@ -11,6 +11,7 @@ export const opts = {
 
 export const Container = styled.div`
   width: 100vw;
+  overflow: hidden;
   /* padding: 10vh 0; */
 `;
 
@@ -81,3 +82,90 @@ export const SiteShowcase = styled.div`
 `;
 
 export const Packages = styled.div``;
+
+export const ButtonGroup = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  margin: 5vh 0 0 0;
+  position: relative;
+  .project-button {
+    justify-self: center;
+    align-self: auto;
+    align-self: center;
+    justify-self: center;
+    width: 155px;
+    height: 51px;
+    background-color: #3845b9;
+    color: #ffffff;
+    font-size: 24px;
+    border: none;
+    box-shadow: 6px 4px 16px -2px rgba(134, 143, 179, 1);
+    transition: 0.8s;
+    position: relative;
+    z-index: 1000;
+    overflow: hidden;
+    a {
+      color: #ffffff;
+    }
+  }
+
+  .project-button:hover {
+    a {
+      color: #3845b9;
+    }
+  }
+  .project-button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #ffffff;
+    z-index: -1;
+    transition: 0.8s;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+  }
+  .project-button:hover::before {
+    height: 180%;
+  }
+
+  .contact-button {
+    align-self: center;
+    justify-self: center;
+    width: 155px;
+    height: 51px;
+    background-color: #ffffff;
+    color: #3845b9;
+    font-size: 24px;
+    border: 1px black solid;
+    box-shadow: 6px 4px 16px -2px rgba(0, 0, 0, 0.22);
+    transition: 0.8s;
+    position: relative;
+    z-index: 1000;
+    overflow: hidden;
+    a {
+      color: #3845b9;
+    }
+  }
+  .contact-button:hover {
+    a {
+      color: #ffffff;
+    }
+  }
+  .contact-button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #3845b9;
+    z-index: -1;
+    transition: 0.8s;
+    top: 0;
+    border-radius: 0 0 50% 50%;
+  }
+  .contact-button:hover::before {
+    height: 180%;
+  }
+`;
