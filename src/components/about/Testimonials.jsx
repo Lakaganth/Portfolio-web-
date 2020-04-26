@@ -33,15 +33,27 @@ const Testimonials = () => {
     .green-circle{
       transform: translateX(10vw) translateY(0vh);
     } 
+    ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    h3 {
+      font-size: 52px;  
+      padding-top: 1vh;
+    }
+  `}
+
   `}
   `;
   const CardStack = styled.div`
     width: 80%;
     margin: 0 auto;
     position: relative;
-    padding-top: 70vh;
+    padding-top: 20vh;
     ${media.lessThan("small")`
     /* screen width is less than 450px (small) */
+    padding-top: 50vh;
+  `}
+    ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
     padding-top: 50vh;
   `}
   `;
@@ -73,16 +85,27 @@ const Testimonials = () => {
     height: 75vh;
     /* margin-top: 10vh; */
     h5 {
-      font-size: 34px;
-     
+      font-size: 34px;     
     }
     h6 {
-      font-size: 30px;
-     
+      font-size: 30px;     
     }
     p {
-      font-size: 24px;
-     
+      font-size: 24px;     
+    }
+  `}
+    ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    width: 65vw;
+    height: 75vh;
+    h5 {
+      font-size: 44px;     
+    }
+    h6 {
+      font-size: 40px;     
+    }
+    p {
+      font-size: 28px;     
     }
   `}
   `;

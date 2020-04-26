@@ -36,6 +36,17 @@ export const RoadMap = () => {
     display:none;
     }
   `}
+
+    ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    h3{
+      font-size: 42px;
+      padding-top: 5vh;
+    }
+    .about-wave {
+    display:none;
+    }
+  `}
   `;
   const Roadmap = styled.div`
     width: 80%;
@@ -105,6 +116,15 @@ export const RoadMap = () => {
       box-shadow: -15px 12px 7px -6px rgba(0, 0, 0, 0.35);
     }
   `}
+    ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    width: 37vw;
+    height: 18vh;
+    padding: 10px 0 10px 15px;
+    h5 {     
+      margin: 10px 0;
+    }
+  `}
   `;
   const Card2 = styled.div`
     width: 437px;
@@ -159,6 +179,15 @@ export const RoadMap = () => {
       box-shadow: -15px 12px 7px -6px rgba(0, 0, 0, 0.35);
     }
   `}
+    ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    width: 35vw;
+    height: 15vh;
+    padding: 10px 10px 15px 0px;
+    h5 {     
+     margin: 10px 0;
+   }
+  `}
   `;
   const Card3 = styled.div`
     width: 437px;
@@ -212,6 +241,16 @@ export const RoadMap = () => {
       transform: translate3d(0vw, 0vh, 0);
       box-shadow: -15px 12px 7px -6px rgba(0, 0, 0, 0.35);
     }
+  `}
+    ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    width: 35vw;
+    height: 15vh;
+    padding: 10px 0 15px 10px;
+    transform: translate3d(40vw, -27vh, 0);
+    h5 {     
+     margin: 10px 0;
+   }
   `}
   `;
   return (
