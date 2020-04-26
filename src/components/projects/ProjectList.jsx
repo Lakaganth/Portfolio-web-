@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import media from "styled-media-query";
 
 const ProjectList = ({
   type,
@@ -52,7 +53,7 @@ export default ProjectList;
 
 const Container = styled.div`
   width: 100%;
-  height: 425px;
+  height: 50vh;
   margin: 10vh 0;
   background-color: #343638;
   display: grid;
@@ -66,6 +67,12 @@ const Container = styled.div`
   &:hover .hero {
     width: 100%;
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    display: flex;
+   flex-direction:column;
+   height: 60vh;
+  `}
 `;
 
 const Hero = styled.div`
@@ -106,6 +113,20 @@ const Hero = styled.div`
       /* line-height: 45px; */
     }
   }
+
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 1vh; */
+    padding-top: 2vh;
+    .project-type-pill,
+  .project-tech-pill {
+    margin: 1vh 0;
+       }
+  `}
 `;
 
 const HeroIcon = styled.div`
@@ -121,15 +142,15 @@ const HeroIcon = styled.div`
     transform: scale(1.2);
   }
 
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 10%;
-    right: -2px;
-    height: 80%;
-    border-left: 2px solid black;
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    width: 90vw;
+    height: 100%;
+    padding-left: 10px;
+    img {
+    transform: scale(1);
   }
+  `}
 `;
 const HeroMore = styled.div`
   height: 100%;
@@ -139,6 +160,13 @@ const HeroMore = styled.div`
   justify-content: space-evenly;
   align-items: center;
   color: black;
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    padding: 0 0px 0 00px;
+   h6{
+     display:none;
+   }
+  `}
 `;
 const Content = styled.div`
   padding-left: 550px;
@@ -163,6 +191,10 @@ const Content = styled.div`
     color: gray;
     /* border-bottom: 1px solid white; */
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+   display:none;
+  `}
 `;
 
 const TechTablets = styled.div`
@@ -186,6 +218,10 @@ const TechTablets = styled.div`
     line-height: 30px;
     font-size: 24px;
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+   display:none;
+  `}
 `;
 const ReadButton = styled.button`
   background: #2c2552;
