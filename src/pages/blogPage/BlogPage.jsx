@@ -8,9 +8,10 @@ import ReactMarkdown from "react-markdown";
 import Markdown from "markdown-to-jsx";
 import BlogBox from "../../components/blog/BlogBox";
 import Footer from "../../components/UI/footer/Footer";
+import media from "styled-media-query";
 
 const BlogPage = () => {
-  const blogsRedux = useSelector(state => state.blog.blogs);
+  const blogsRedux = useSelector((state) => state.blog.blogs);
   const dispatch = useDispatch();
   useEffect(() => {
     getBlogsFromRedux();
@@ -81,7 +82,7 @@ const BlogPage = () => {
       {/* <Link to="/blog/add">Create a new Blog</Link> */}
       <BlogContainer>
         {blogsRedux &&
-          blogsRedux.map(blog => <BlogBox key={blog.bID} blog={blog} />)}
+          blogsRedux.map((blog) => <BlogBox key={blog.bID} blog={blog} />)}
       </BlogContainer>
     </Container>
   );
@@ -118,4 +119,14 @@ const BlogContainer = styled.div`
   grid-gap: 80px;
   align-content: center;
   justify-content: center;
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 80px;
+  `}
+  ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 80px;
+  `}
 `;

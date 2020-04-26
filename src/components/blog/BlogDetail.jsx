@@ -6,11 +6,12 @@ import ReactMarkdown from "react-markdown";
 import * as Showdown from "showdown";
 import MarkdownIt from "markdown-it";
 import { useSpring, animated } from "react-spring";
+import media from "styled-media-query";
 
 const calc = (x, y) => [
   -(y - window.innerHeight / 2) / 20,
   (x - window.innerWidth / 2) / 20,
-  1.1
+  1.1,
 ];
 const trans = (x, y, s) =>
   `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
@@ -22,12 +23,12 @@ const BlogDetail = ({ location }) => {
     tables: true,
     simplifiedAutoLink: true,
     strikethrough: true,
-    tasklists: true
+    tasklists: true,
   });
 
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 1],
-    config: { mass: 5, tension: 350, friction: 40 }
+    config: { mass: 5, tension: 350, friction: 40 },
   }));
 
   const markdownOption = {
@@ -37,14 +38,14 @@ const BlogDetail = ({ location }) => {
     langPrefix: "language-", // CSS language prefix for fenced blocks
     linkify: false, // autoconvert URL-like texts to links
     typographer: true, // Enable smartypants and other sweet transforms
-    quotes: "“”‘’"
+    quotes: "“”‘’",
   };
 
   const md = new MarkdownIt(markdownOption);
 
   const htmlOutput = md.render(selectedblog.post);
   const renderResult = {
-    __html: htmlOutput
+    __html: htmlOutput,
   };
 
   return (
@@ -152,6 +153,14 @@ const BlogDetailContainer = styled.div`
   width: 70%;
   margin: 0 auto;
   padding-top: 25vh;
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    width: 100%;
+  `}
+  ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    width: 100%;
+  `}
 `;
 const BlogPost = styled.div`
   border-radius: 6px;
@@ -160,6 +169,14 @@ const BlogPost = styled.div`
   padding: 3vh 0;
   margin-bottom: 3vh;
   /* overflow: hidden; */
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    box-shadow: none;
+  `}
+  ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    box-shadow: none;
+  `}
 `;
 
 const ImageContainer = styled(animated.div)`
@@ -172,6 +189,14 @@ const ImageContainer = styled(animated.div)`
   ${({ src }) => src && ` background: url(${src}) ;`}
   background-size:cover;
   background-position: center center;
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    width: 100%;
+  `}
+  ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    width: 100%;
+  `}
 `;
 
 const PostTitle = styled.h3`
@@ -199,4 +224,20 @@ const Post = styled.div`
     border-radius: 10px;
     box-shadow: 1.5px 6px 16px 0px rgba(0, 0, 0, 0.33);
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    width: 90%;
+    pre {
+    font-size: 12px;  
+    overflow:hidden;
+  }
+  `}
+  ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    width: 90%;
+    pre {
+    font-size: 12px;  
+    overflow:hidden;
+  }
+  `}
 `;

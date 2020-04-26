@@ -3,12 +3,12 @@ import styled from "styled-components";
 import * as Blogactions from "../../store/actions/BlogActions";
 import { useDispatch } from "react-redux";
 import { withRouter } from "react-router-dom";
-import { useSpring, animated } from "react-spring";
+import media from "styled-media-query";
 
 const calc = (x, y) => [
   -(y - window.innerHeight / 4) / 20,
   (x - window.innerWidth / 1.2) / 20,
-  1.1
+  1.1,
 ];
 const trans = (x, y, s) =>
   `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
@@ -74,6 +74,14 @@ const Container = styled.div`
       color: #f4f4f4;
     }
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    width: 85vw;
+  `}
+  ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    width: 85vw;
+  `}
 `;
 const ImgContainer = styled.div`
   width: 25vw;
@@ -83,4 +91,12 @@ const ImgContainer = styled.div`
   background-size:cover;
   background-position: center center;
   box-shadow: 1.5px 6px 5px 0px rgba(0, 0, 0, 0.13);
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    width: 85vw;
+  `}
+  ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    width: 85vw;
+  `}
 `;
