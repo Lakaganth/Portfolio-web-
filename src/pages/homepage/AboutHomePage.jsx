@@ -11,8 +11,7 @@ export default function AboutHomePage() {
   const AboutContainer = styled.div`
     width: 80%;
     margin: 0 auto;
-    padding-top: 10vh;
-    height: 55vh;
+    padding: 5vh 0;
     text-align: center;
     h2 {
       font-size: 42px;

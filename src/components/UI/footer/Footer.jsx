@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import media from "styled-media-query";
 
 const Footer = () => {
   const Container = styled.div`
@@ -10,6 +11,10 @@ const Footer = () => {
     div {
       padding-top: 5vh;
     }
+    ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    display:none;
+  `}
   `;
   const IconContainer = styled.div`
     width: 500px;

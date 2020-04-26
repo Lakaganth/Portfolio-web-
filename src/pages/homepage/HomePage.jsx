@@ -7,9 +7,8 @@ import ExperienceContainer from "../../components/home/ExperienceContainer";
 import Footer from "./../../components/UI/footer/Footer";
 import SubscribeContainer from "../../components/home/SubscribeContainer";
 import { Link } from "react-router-dom";
-import { useSpring, animated, interpolate } from "react-spring";
+import { useSpring, animated } from "react-spring";
 import Tilt from "react-parallax-tilt";
-import Rellax from "rellax";
 
 const HomePage = () => {
   // console.log(Rellax);

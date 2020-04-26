@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import media from "styled-media-query";
 import "./HomeComponents.scss";
 
 const SubscribeContainer = () => {
@@ -24,8 +25,8 @@ const Container = styled.div`
   z-index: 20;
 `;
 const SubContainer = styled.div`
-  width: 1000px;
-  height: 297px;
+  width: 100vw;
+  /* height: 297px; */
   background-color: #fff;
   margin: 0 auto;
   border-radius: 10px;

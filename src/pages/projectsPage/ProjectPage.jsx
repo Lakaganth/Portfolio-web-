@@ -23,7 +23,7 @@ export const ProjectPage = () => {
           img={Samengine}
           techArr={samTechArr}
           name={"Sam Auto"}
-          routeName={"sansa"}
+          routeName={"samauto"}
           desc={
             "Server side rendered website for the client Sam Auto in Toronto. A          dynamic website created using NextJs."
           }

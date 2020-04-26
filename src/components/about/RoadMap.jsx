@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const RoadMap = () => {
   const Container = styled.div`
     width: 100vw;
-    /* height: 100vh; */
     background-color: #f6f5f5;
     overflow: hidden;
     position: relative;
@@ -27,6 +27,15 @@ export const RoadMap = () => {
       left: 0;
       transform: translateY(-4vh);
     }
+    ${media.lessThan("small")`
+       h3{
+      font-size: 42px;
+      padding-top: 5vh;
+    }
+    .about-wave {
+    display:none;
+    }
+  `}
   `;
   const Roadmap = styled.div`
     width: 80%;
@@ -37,6 +46,14 @@ export const RoadMap = () => {
       width: 100%;
       margin: 0 auto;
     }
+    ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    width: 100%;
+    padding-top: 0vh;
+    svg{
+      display:none;
+    }
+  `}
   `;
   const Card1 = styled.div`
     width: 437px;
@@ -65,6 +82,29 @@ export const RoadMap = () => {
       transform: translate3d(39vw, -62vh, 0);
       box-shadow: 15px 15px 5px -6px rgba(0, 0, 0, 0.23);
     }
+    ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    position: relative;
+    transform: translate3d(0vw, 0vh, 0);
+    box-shadow: -15px 12px 7px -6px rgba(0, 0, 0, 0.35);
+    margin: 10vh auto;
+    width: 90vw;
+    height: 30vh;
+    h6 {
+      font-size: 28px;
+    }
+    h5 {
+      font-size: 26px;
+    
+    }
+    p {
+      font-size: 23px;
+    }
+    &:hover {
+      transform: translate3d(0vw, 0vh, 0);
+      box-shadow: -15px 12px 7px -6px rgba(0, 0, 0, 0.35);
+    }
+  `}
   `;
   const Card2 = styled.div`
     width: 437px;
@@ -95,6 +135,30 @@ export const RoadMap = () => {
       transform: translate3d(-49vw, -44vh, 0);
       box-shadow: -17px 13px 9px -6px rgba(0, 0, 0, 0.23);
     }
+    ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    position: relative;
+    transform: translate3d(0vw, 0vh, 0);
+    margin: 10vh auto;
+    width: 90vw;
+    height: 30vh;
+    text-align: left;
+    padding: 25px 0 25px 50px;
+    h6 {
+      font-size: 28px;
+    }
+    h5 {
+      font-size: 26px;
+    
+    }
+    p {
+      font-size: 23px;
+    }
+    &:hover {
+      transform: translate3d(0vw, 0vh, 0);
+      box-shadow: -15px 12px 7px -6px rgba(0, 0, 0, 0.35);
+    }
+  `}
   `;
   const Card3 = styled.div`
     width: 437px;
@@ -124,6 +188,31 @@ export const RoadMap = () => {
       transform: translate3d(41vw, -22vh, 0);
       box-shadow: -14px -14px 5px -6px rgba(0, 0, 0, 0.23);
     }
+    ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    position: relative;
+    transform: translate3d(0vw, 0vh, 0);  
+    box-shadow: -15px 12px 7px -6px rgba(0, 0, 0, 0.35);
+    margin: 10vh auto;
+    width: 90vw;
+    height: 30vh;
+    text-align: left;
+    padding: 25px 0 25px 50px;
+    h6 {
+      font-size: 28px;
+    }
+    h5 {
+      font-size: 26px;
+    
+    }
+    p {
+      font-size: 23px;
+    }
+    &:hover {
+      transform: translate3d(0vw, 0vh, 0);
+      box-shadow: -15px 12px 7px -6px rgba(0, 0, 0, 0.35);
+    }
+  `}
   `;
   return (
     <Container>
@@ -149,29 +238,6 @@ export const RoadMap = () => {
           />
         </path>
       </svg>
-      {/* <svg
-        className="about-wave-2"
-        width="1440"
-        height="254"
-        viewBox="0 0 3130 354"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path fill="#F7D7FF" fill-opacity="0.57">
-          <animate
-            dur="10s"
-            fill="freeze"
-            repeatDur="indefinite"
-            attributeName="d"
-            values="
-            M3140 0H0V214.852C281.585 287.096 1023.53 392.998 1738.62 238.655C2453.72 84.3123 2970.83 192.72 3140 266.216V0Z;
-            M3138 0H0V172.515C281.406 230.523 1041.24 47.3326 1737.52 191.628C2520.87 353.968 3138 213.758 3138 213.758V0Z; 
-            
-            M3140 0H0V214.852C281.585 287.096 1023.53 392.998 1738.62 238.655C2453.72 84.3123 2970.83 192.72 3140 266.216V0Z
-           "
-          />
-        </path>
-      </svg> */}
 
       <h3>My Experience Roadmap</h3>
       <Roadmap>

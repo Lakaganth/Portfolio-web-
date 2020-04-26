@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import media from "styled-media-query";
 
 // Logo Imports
 import ReactLogo from "../../assets/images/tectLogos/react.svg";
@@ -356,6 +357,12 @@ justify-content: center; */
     font-size: 24px;
     font-family: "Marvel";
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  `}
 `;
 const Container = styled.div`
 width: 100%;

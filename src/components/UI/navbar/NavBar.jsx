@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { Waypoint } from "react-waypoint";
 import { animated, useSpring } from "react-spring";
 import styled from "styled-components";
+import media from "styled-media-query";
 
 const NavBar = () => {
   const [hasScrolled, setHasScrolled] = React.useState(false);
@@ -12,7 +13,7 @@ const NavBar = () => {
     window.addEventListener("scroll", handleScroll);
   }, []);
 
-  const handleScroll = e => {
+  const handleScroll = (e) => {
     const scrollTop = window.pageYOffset;
     if (scrollTop > 100) {
       setHasScrolled(true);
@@ -68,6 +69,11 @@ const Container = styled(animated.div)`
     height: 70px;
     padding-top: 10px;
   }
+
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+ display:none;
+  `}
 `;
 
 const Grids = styled.div`

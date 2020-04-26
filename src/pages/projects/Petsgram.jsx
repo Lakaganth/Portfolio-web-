@@ -90,7 +90,7 @@ export const Petsgram = () => {
             </ButtonGroup>
           </div>
           <div className="hero-image">
-            <img src={HeroImg} alt="Petsgram" />
+            <img src={HeroImg} alt="Sam" />
           </div>
         </ProjHeroGrid>
       </ProjectHero>

@@ -158,10 +158,6 @@ const Container = styled.div`
     font-weight: normal;
     padding-top: 2rem;
   }
-  /* ${ExpCard}:hover {
-    transform: translate3d(10px, -10px, 5px);
-    box-shadow: 15px 15px 5px -6px rgba(0, 0, 0, 0.23);
-  } */
 
   button {
     background: none;
@@ -235,6 +231,5 @@ transform: translateY(-10vh);
     opacity: 0;
     display:none;
 `}
-
 
 `;

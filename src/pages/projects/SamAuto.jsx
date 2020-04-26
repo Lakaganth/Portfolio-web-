@@ -74,11 +74,7 @@ const SamAuto = () => {
           </ProjectTitle>
           <div className="hero-vid">
             <div className="youtube">
-              <YouTube
-                videoId="RlEgDQLz_1Y"
-                opts={opts}
-                //   onReady={this._onReady}
-              />
+              <YouTube videoId="RlEgDQLz_1Y" opts={opts} />
             </div>
           </div>
         </ProjHeroGrid>
@@ -86,8 +82,8 @@ const SamAuto = () => {
           <img src={HeroImg} alt="Sam Auto" />
         </div>
       </ProjectHero>
-      <ProjIntro>
-        <div className="projDesc">
+      <ProjectIntro>
+        <div className="intro-text">
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -103,10 +99,10 @@ const SamAuto = () => {
             Ipsum.
           </p>
         </div>
-        <div className="projIntoImg">
+        <div className="projIntroImg">
           <img src={ProjIntroImg} alt="Mechanic" />
         </div>
-      </ProjIntro>
+      </ProjectIntro>
       <SiteShowcase>
         <img className="showcase-bg" src={ShowcaseBG} alt="ShowcaseBG" />
         <div className="showcase-img">
@@ -226,8 +222,10 @@ export const ProjectHero = styled.div`
   width: 100%;
   height: 110vh;
   padding: 10vh 0;
+  overflow: hidden;
   .hero-image {
     width: 100vw;
+    padding: 10vh 0;
     img {
       width: 100%;
     }
@@ -252,6 +250,36 @@ export const ProjHeroGrid = styled.div`
       height: 390px;
       width: 680px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+`;
+
+export const ProjectIntro = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  margin: 5vh 0;
+
+  .projIntroImg {
+    width: 60%;
+    img {
+      width: 100%;
+    }
+  }
+
+  .intro-text {
+    width: 90%;
+    p {
+      font-family: Monda;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 52px;
+      text-align: center;
+      letter-spacing: 0.005em;
+      color: #000000;
+      padding: 2vh 0;
     }
   }
 `;

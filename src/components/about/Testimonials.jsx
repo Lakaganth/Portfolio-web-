@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import media from "styled-media-query";
 import ReactCardCarousel from "react-card-carousel";
 
 const Testimonials = () => {
@@ -8,6 +9,7 @@ const Testimonials = () => {
     background-color: #fff;
     height: 100vh;
     position: relative;
+    overflow: hidden;
     svg {
       z-index: -10;
     }
@@ -18,7 +20,6 @@ const Testimonials = () => {
     }
     .purple-triangle {
       /* position: absolute; */
-
       transform: translateX(20vw) translateY(20vh);
     }
     .green-circle {
@@ -27,12 +28,22 @@ const Testimonials = () => {
     .blue-circle {
       transform: translateX(30vw) translateY(-10vh);
     }
+    ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    .green-circle{
+      transform: translateX(10vw) translateY(0vh);
+    } 
+  `}
   `;
   const CardStack = styled.div`
     width: 80%;
     margin: 0 auto;
     position: relative;
     padding-top: 70vh;
+    ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    padding-top: 50vh;
+  `}
   `;
   const Card = styled.div`
     height: 45vh;
@@ -56,6 +67,24 @@ const Testimonials = () => {
       margin: 0 auto;
       padding: 1.2rem 0;
     }
+    ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    width: 85vw;
+    height: 75vh;
+    /* margin-top: 10vh; */
+    h5 {
+      font-size: 34px;
+     
+    }
+    h6 {
+      font-size: 30px;
+     
+    }
+    p {
+      font-size: 24px;
+     
+    }
+  `}
   `;
 
   return (
