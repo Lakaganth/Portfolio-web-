@@ -326,8 +326,8 @@ export const ProjHeroGrid = styled.div`
         border-radius: 10px;
         overflow: hidden;
         background: #fff;
-        height: 270px;
-        width:400px;
+        height: 250px;
+        width:360px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       }
     }
@@ -559,6 +559,8 @@ export const Feature3 = styled.div`
     flex-direction: column;
     justify-content:center;
     align-items:center;
+    flex-direction: column-reverse;
+
     width:100%;
     .feature3-image img{
     width:100%;

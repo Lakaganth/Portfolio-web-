@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import media from "styled-media-query";
 import { Waypoint } from "react-waypoint";
 import { animated, useSpring } from "react-spring";
 
-import { Container, ProjectTitle, ProjIntro, opts } from "./ProjectStyles";
+import { Container, ProjectTitle, optsMobile, opts } from "./ProjectStyles";
 import HeroImg from "../../assets/images/Projects/samauto/heroimg.png";
 import ProjIntroImg from "../../assets/images/Projects/samauto/projintro.png";
 import Showcase from "../../assets/images/Projects/samauto/showcase.png";
@@ -67,22 +68,32 @@ const SamAuto = () => {
   return (
     <Container>
       <ProjectHero>
+        <ProjectTitle>
+          <h3>Sam Auto</h3>
+          <h6>Website</h6>
+        </ProjectTitle>
         <ProjHeroGrid>
-          <ProjectTitle>
-            <h3>Sam Auto</h3>
-            <h6>Website</h6>
-          </ProjectTitle>
           <div className="hero-vid">
             <div className="youtube">
               <YouTube videoId="RlEgDQLz_1Y" opts={opts} />
             </div>
+            <div className="youtube-mobile">
+              <YouTube
+                videoId="RlEgDQLz_1Y"
+                opts={optsMobile}
+                //   onReady={this._onReady}
+              />
+            </div>
+          </div>
+          <div className="hero-image">
+            <img src={HeroImg} alt="Sam" />
           </div>
         </ProjHeroGrid>
-        <div className="hero-image">
-          <img src={HeroImg} alt="Sam Auto" />
-        </div>
       </ProjectHero>
       <ProjectIntro>
+        <div className="intro-image">
+          <img src={ProjIntroImg} alt="Mechanic" />
+        </div>
         <div className="intro-text">
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -98,9 +109,6 @@ const SamAuto = () => {
             publishing software like Aldus PageMaker including versions of Lorem
             Ipsum.
           </p>
-        </div>
-        <div className="projIntroImg">
-          <img src={ProjIntroImg} alt="Mechanic" />
         </div>
       </ProjectIntro>
       <SiteShowcase>
@@ -218,18 +226,20 @@ const SamAuto = () => {
 export default SamAuto;
 
 export const ProjectHero = styled.div`
-  background: #bfe1f4;
+  background: #3bbfc1;
   width: 100%;
   height: 110vh;
   padding: 10vh 0;
   overflow: hidden;
-  .hero-image {
-    width: 100vw;
-    padding: 10vh 0;
-    img {
-      width: 100%;
-    }
-  }
+
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    padding: 5vh 0 2vh 0 ;
+    img{
+        width: 120%;
+        margin: 0vh 0vw;
+       }     
+  `}
 `;
 
 export const ProjHeroGrid = styled.div`
@@ -237,11 +247,18 @@ export const ProjHeroGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
-  padding: 10vh 0 2vh 0;
+  /* padding: 10vh 0 2vh 0; */
+
+  .hero-image {
+    padding: 0vh 0;
+    img {
+      width: 60%;
+    }
+  }
 
   .hero-vid {
     justify-self: center;
-    align-self: flex-end;
+    align-self: center;
 
     .youtube {
       border-radius: 10px;
@@ -251,7 +268,47 @@ export const ProjHeroGrid = styled.div`
       width: 680px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
+    .youtube-mobile {
+      display: none;
+    }
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    grid-template-columns: 1fr;
+    .hero-image {
+      margin: 0vh 00vw;
+      padding-left:0vw;
+      align-self: end;
+      img{
+        width: 100%;
+        margin: 1vh 0vw;
+       }     
+    }
+    .hero-vid{
+      justify-self: center;
+     align-self: center;
+     padding: 5vh 0 0 0;
+      .youtube{
+        display: none;
+      }
+      .youtube-mobile{
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #fff;
+        height: 250px;
+        width:360px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        /* padding: 1vh 0; */
+      }
+    }
+    .hero-image {
+    padding: 0vh 0;
+    img {
+      width: 100%;
+     }
+    }
+  `}
 `;
 
 export const ProjectIntro = styled.div`
@@ -282,11 +339,32 @@ export const ProjectIntro = styled.div`
       padding: 2vh 0;
     }
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    flex-direction: column-reverse;
+    .intro-image{
+      width: 100vw;      
+      img{
+      width:100%;
+    }
+    } 
+    .intro-text {
+    width: 90%;
+    p {
+      font-size: 24px;
+      line-height: 42px;
+    }
+  }
+  `}
 `;
 
 export const SiteShowcase = styled.div`
   position: relative;
-
   width: 100vw;
 
   .showcase-img {
@@ -304,6 +382,19 @@ export const SiteShowcase = styled.div`
   .showcase-bg {
     width: 100%;
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    .showcase-bg {
+    width: 100%;
+    height: 50vh;
+  }
+    .showcase-img {
+    z-index: 5;
+    position: absolute;
+    top: 10vh;
+    left: 0vw;
+  }
+  `}
 `;
 
 export const Packages = styled.div`
@@ -330,6 +421,15 @@ export const Packages = styled.div`
       text-align: center;
     }
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    
+    .icon-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5vh;    
+  }
+  `}
 `;
 
 export const Feature1 = styled.div`
@@ -364,6 +464,31 @@ export const Feature1 = styled.div`
   img {
     padding-top: 10vh;
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column-reverse;
+    width:100%;
+    img {
+    padding: 1vh 0;
+    width:100%;
+  }
+  p {
+     font-size: 20px;
+    line-height: 30px;   
+    padding: 1.5vh 0vw 1.5vh 4vw;
+    width:90%;   
+  }
+  .feature1-text{
+    padding:0
+  }
+  .feature1-image{
+    transform: translate3d(0px,0px,0) scale(1);
+  }
+  `}
 `;
 export const Feature2 = styled.div`
   display: grid;
@@ -396,7 +521,27 @@ export const Feature2 = styled.div`
   }
   img {
     padding: 2vh 0;
+    align-self: center;
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    p{
+      width: 100%;
+    }
+    .Feature2-image{
+      align-self: center;
+    }
+    img{
+      padding: 0vh 0;
+      width:100%;
+    }
+    /* flex-direction: column-reverse; */
+  `}
 `;
 export const Feature3 = styled.div`
   display: grid;
@@ -432,8 +577,23 @@ export const Feature3 = styled.div`
   }
   .feature3-image {
     align-self: end;
-    /* justify-self: flex-end; */
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    flex-direction: column-reverse;
+    .feature3-image {
+    align-self: center;
+    img{
+    width:100%;
+
+    }
+  }
+  `}
 `;
 
 export const Feature4 = styled.div`

@@ -285,6 +285,9 @@ export const ProjHeroGrid = styled.div`
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       margin-top: 50px;
     }
+    .youtube-mobile {
+      display: none;
+    }
   }
   ${media.lessThan("small")`
     /* screen width is less than 450px (small) */
