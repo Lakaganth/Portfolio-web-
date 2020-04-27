@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import media from "styled-media-query";
 import YouTube from "react-youtube";
 import { Link } from "react-router-dom";
 import {
   Container,
   ProjectTitle,
   ButtonGroup,
+  optsMobile,
   //   ProjectHero,
   //   ProjHeroGrid,
   //   ProjIntro,
@@ -41,6 +43,7 @@ export const SansaKitchen = () => {
       : "translate3d(-300px, 60px, 0) rotateY(180deg)",
     scale: animF1 ? 1 : 1.5,
   });
+
   const F21Animation = useSpring({
     opacity: animF2 ? 1 : 0,
     transform: animF2
@@ -89,6 +92,13 @@ export const SansaKitchen = () => {
                 //   onReady={this._onReady}
               />
             </div>
+            <div className="youtube-mobile">
+              <YouTube
+                videoId="3PXl87pBnRc"
+                opts={optsMobile}
+                //   onReady={this._onReady}
+              />
+            </div>
             <ButtonGroup>
               <button className="project-button">
                 <Link to="/projects">Live</Link>
@@ -105,7 +115,7 @@ export const SansaKitchen = () => {
       </ProjectHero>
       <ProjectIntro>
         <div className="intro-image">
-          <img src={IntroImage} alt="Sam Auto" />
+          <img src={IntroImage} alt="Sansa Kitchen intro" />
         </div>
         <div className="intro-text">
           <p>
@@ -126,10 +136,6 @@ export const SansaKitchen = () => {
       </ProjectIntro>
       <ScreenShowcase>
         <img className="app-screens" src={ShowcaseBG} alt="Sansa Screens" />
-        {/* <img className="green-circle" src={GreenCircle} alt="green-circle" />
-        <img className="red-circle" src={RedCircle} alt="red-circle" />
-        <img className="green-pacman" src={GreenPacman} alt="green-packman" />
-        <img className="star" src={Star} alt="star" /> */}
       </ScreenShowcase>
       <Packages>
         <p className="package-title">Packages</p>
@@ -265,8 +271,11 @@ export const SansaKitchen = () => {
 export const ProjectHero = styled.div`
   background: #bfe1f4;
   width: 100vw;
-  /* height: 115vh; */
   padding: 15vh 0;
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    padding: 5vh 0 2vh 0 ;
+  `}
 `;
 
 export const ProjHeroGrid = styled.div`
@@ -291,11 +300,42 @@ export const ProjHeroGrid = styled.div`
       width: 680px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
+    .youtube-mobile {
+      display: none;
+    }
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    grid-template-columns: 1fr;
+    .hero-image {
+      margin: 3vh 10vw;
+      padding-left:5vw;
+      img{
+        width: 90%;
+        margin: 1vh 0vw;
+       }     
+    }
+    .hero-vid{
+      justify-self: center;
+    align-self: center;
+      .youtube{
+        display: none;
+      }
+      .youtube-mobile{
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #fff;
+        height: 270px;
+        width:400px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+  `}
 `;
 
 export const ProjectIntro = styled.div`
-  height: 80vh;
+  /* height: 80vh; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
@@ -315,6 +355,21 @@ export const ProjectIntro = styled.div`
       padding: 2vh 0;
     }
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    grid-template-columns: 1fr;
+    margin: 2vh 0;
+    .intro-image img{
+      width:100%;
+    }
+    .intro-text {
+    width: 90%;
+    p {
+      font-size: 24px;
+      line-height: 42px;
+    }
+  }
+  `}
 `;
 
 export const ScreenShowcase = styled.div`
@@ -324,31 +379,8 @@ export const ScreenShowcase = styled.div`
     cover;
   position: relative;
   .app-screens {
-    /* padding-left: 20vw; */
     z-index: 5;
     width: 100%;
-    /* position: absolute; */
-  }
-  .green-circle {
-    position: absolute;
-    top: 0;
-    left: 20vw;
-    max-width: 75%;
-  }
-  .red-circle {
-    position: absolute;
-    bottom: 0;
-    left: 20vw;
-  }
-  .green-pacman {
-    position: absolute;
-    bottom: 10vh;
-    right: 20vw;
-  }
-  .star {
-    position: absolute;
-    top: 15vh;
-    right: 15vw;
   }
 `;
 
@@ -376,6 +408,14 @@ export const Packages = styled.div`
       text-align: center;
     }
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    .icon-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5vh;    
+  }
+  `}
 `;
 
 export const Feature1 = styled.div`
@@ -410,6 +450,32 @@ export const Feature1 = styled.div`
   img {
     padding: 2vh 0;
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    img {
+    padding: 1vh 0;
+    width:90%;
+  }
+
+  p {
+     font-size: 20px;
+    line-height: 30px;   
+    padding: 1.5vh 0vw 1.5vh 4vw;
+    width:90%;   
+  }
+  .feature1-text{
+    padding:0
+  }
+  .feature1-image{
+    transform: translate3d(100px,0,0);
+  }
+
+  `}
 `;
 export const Feature2 = styled.div`
   display: grid;
@@ -441,6 +507,15 @@ export const Feature2 = styled.div`
   img {
     padding: 2vh 0;
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    
+  `}
 `;
 export const Feature3 = styled.div`
   display: grid;
@@ -478,11 +553,24 @@ export const Feature3 = styled.div`
     align-self: end;
     /* justify-self: flex-end; */
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    .feature3-image img{
+    width:100%;
+    /* justify-self: flex-end; */
+  }
+  `}
 `;
 
 export const Feature4 = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
   padding: 5vh 0;
   justify-items: center;
   align-items: center;
@@ -520,4 +608,21 @@ export const Feature4 = styled.div`
       height: 80%;
     }
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:90%;
+    margin: 0 auto;
+    .feature4-image{
+      .feature41{
+        padding-left: 15vw;
+      }
+      .feature42, .feature43{
+        display:none;
+      }
+    }
+  `}
 `;

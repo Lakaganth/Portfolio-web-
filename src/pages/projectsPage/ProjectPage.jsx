@@ -199,4 +199,8 @@ const List = styled.div`
     /* screen width is less than 450px (small) */
     width: 95%;
   `}
+  ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    width: 80%;
+  `}
 `;

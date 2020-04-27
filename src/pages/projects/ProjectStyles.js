@@ -1,8 +1,17 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const opts = {
   height: "390",
   width: "680",
+  playerVars: {
+    // https://developers.google.com/youtube/player_parameters
+    autoplay: 3,
+  },
+};
+export const optsMobile = {
+  height: "250",
+  width: "360",
   playerVars: {
     // https://developers.google.com/youtube/player_parameters
     autoplay: 3,
@@ -39,6 +48,13 @@ export const ProjectTitle = styled.div`
     letter-spacing: 0.38em;
     color: #636363;
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    font-size: 40px;
+    h6{
+      font-size: 40px;
+    }
+  `}
 `;
 
 export const ProjHeroGrid = styled.div`
@@ -168,4 +184,10 @@ export const ButtonGroup = styled.div`
   .contact-button:hover::before {
     height: 180%;
   }
+
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    grid-template-columns: repeat(1, auto);
+    grid-gap: 4vh;
+  `}
 `;

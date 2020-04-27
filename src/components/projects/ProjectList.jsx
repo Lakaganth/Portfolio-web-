@@ -69,9 +69,15 @@ const Container = styled.div`
   }
   ${media.lessThan("small")`
     /* screen width is less than 450px (small) */
-    display: flex;
+   display: flex;
    flex-direction:column;
    height: 60vh;
+  `}
+  ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+   display: flex;
+   flex-direction:column;
+   height: 45vh;
   `}
 `;
 
@@ -119,11 +125,22 @@ const Hero = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    /* margin-top: 1vh; */
+    flex-direction: column; 
     padding-top: 2vh;
     .project-type-pill,
-  .project-tech-pill {
+    .project-tech-pill {
+    margin: 1vh 0;
+       }
+  `}
+  ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    padding-top: 2vh;
+    .project-type-pill,
+    .project-tech-pill {
     margin: 1vh 0;
        }
   `}
@@ -151,6 +168,16 @@ const HeroIcon = styled.div`
     transform: scale(1);
   }
   `}
+  ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    width: 90vw;
+    height: 100%;
+    padding-left: 00px;
+    padding-right: 10vw;
+    img {
+    transform: scale(1);
+  }
+  `}
 `;
 const HeroMore = styled.div`
   height: 100%;
@@ -164,6 +191,13 @@ const HeroMore = styled.div`
     /* screen width is less than 450px (small) */
     padding: 0 0px 0 00px;
    h6{
+     display:none;
+   }
+  `}
+  ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    padding: 0 0px 0 00px;
+    h6{
      display:none;
    }
   `}
@@ -195,6 +229,10 @@ const Content = styled.div`
     /* screen width is less than 450px (small) */
    display:none;
   `}
+  ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    display:none;
+  `}
 `;
 
 const TechTablets = styled.div`
@@ -221,6 +259,10 @@ const TechTablets = styled.div`
   ${media.lessThan("small")`
     /* screen width is less than 450px (small) */
    display:none;
+  `}
+  ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    display:none;
   `}
 `;
 const ReadButton = styled.button`

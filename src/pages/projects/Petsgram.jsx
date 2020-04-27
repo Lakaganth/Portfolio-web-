@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import media from "styled-media-query";
 import YouTube from "react-youtube";
 import { Link } from "react-router-dom";
 import {
   Container,
   ProjectTitle,
   ButtonGroup,
+  optsMobile,
   //   ProjectHero,
   //   ProjHeroGrid,
   //   ProjIntro,
@@ -77,6 +79,13 @@ export const Petsgram = () => {
               <YouTube
                 videoId="IF8hvSjnp6E"
                 opts={opts}
+                //   onReady={this._onReady}
+              />
+            </div>
+            <div className="youtube-mobile">
+              <YouTube
+                videoId="IF8hvSjnp6E"
+                opts={optsMobile}
                 //   onReady={this._onReady}
               />
             </div>
@@ -248,6 +257,10 @@ export const ProjectHero = styled.div`
   background: linear-gradient(243.17deg, #c3e6e2 1.45%, #8de4ff 100.05%);
   width: 100vw;
   padding: 10vh 0;
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    padding: 5vh 0 2vh 0 ;
+  `}
 `;
 
 export const ProjHeroGrid = styled.div`
@@ -273,6 +286,35 @@ export const ProjHeroGrid = styled.div`
       margin-top: 50px;
     }
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    grid-template-columns: 1fr;
+    .hero-image {
+      margin: 0vh 00vw;
+      padding-left:0vw;
+      align-self: end;
+      img{
+        width: 100%;
+        margin: 1vh 0vw;
+       }     
+    }
+    .hero-vid{
+      justify-self: center;
+     align-self: center;
+      .youtube{
+        display: none;
+      }
+      .youtube-mobile{
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #fff;
+        height: 250px;
+        width:360px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+  `}
 `;
 
 export const ProjectIntro = styled.div`
@@ -297,6 +339,21 @@ export const ProjectIntro = styled.div`
       padding: 2vh 0;
     }
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    grid-template-columns: 1fr;
+    margin: 0vh 0;
+    .intro-image img{
+      width:100%;
+    }
+    .intro-text {
+    width: 90%;
+    p {
+      font-size: 24px;
+      line-height: 42px;
+    }
+  }
+  `}
 `;
 
 export const ScreenShowcase = styled.div`
@@ -313,6 +370,14 @@ export const ScreenShowcase = styled.div`
     width: 80%;
     padding: 10vh 0 5vh 25vw;
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    .app-screens {
+    z-index: 5;
+    width: 120%;
+    padding: 0vh 0 0vh 0vw;
+  }
+  `}
 `;
 
 export const Packages = styled.div`
@@ -339,6 +404,15 @@ export const Packages = styled.div`
       text-align: center;
     }
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    
+    .icon-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5vh;    
+  }
+  `}
 `;
 
 export const Feature1 = styled.div`
@@ -373,6 +447,31 @@ export const Feature1 = styled.div`
   img {
     padding: 2vh 0;
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    img {
+    padding: 1vh 0;
+    width:90%;
+  }
+
+  p {
+     font-size: 20px;
+    line-height: 30px;   
+    padding: 1.5vh 0vw 1.5vh 4vw;
+    width:90%;   
+  }
+  .feature1-text{
+    padding:0
+  }
+  .feature1-image{
+    transform: translate3d(0px,0,0) scale(1);
+  }
+  `}
 `;
 
 export const Feature2 = styled.div`
@@ -405,6 +504,15 @@ export const Feature2 = styled.div`
   img {
     padding: 0vh 0;
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    flex-direction: column-reverse;
+  `}
 `;
 
 export const Feature3 = styled.div`
@@ -445,6 +553,18 @@ export const Feature3 = styled.div`
     align-self: end;
     /* justify-self: flex-end; */
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    .feature3-image img{
+    width:120%;
+    /* justify-self: flex-end; */
+  }
+  `}
 `;
 
 export const Feature4 = styled.div`
@@ -487,4 +607,22 @@ export const Feature4 = styled.div`
       height: 80%;
     }
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column-reverse;
+    width:90%;
+    margin: 0 auto;
+    .feature4-image{
+      .feature41{
+        padding-left: 15vw;
+      }
+      .feature42, .feature43{
+        display:none;
+      }
+    }
+  `}
 `;
