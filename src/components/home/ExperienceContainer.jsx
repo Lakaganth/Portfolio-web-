@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./HomeComponents.scss";
 import styled from "styled-components";
+import media from "styled-media-query";
 
 // Logos
 
@@ -163,6 +164,26 @@ const Container = styled.div`
     background: none;
     border: none;
   }
+  .exp-col {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+  .left-col {
+    align-self: center;
+    justify-self: center;
+  }
+
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    .exp-col {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+  }
+  .left-col {
+    width:100%;
+  }
+  `}
 `;
 
 const ExpContainer = styled.div`
@@ -173,8 +194,7 @@ const ExpContainer = styled.div`
 `;
 
 const ExpDetail = styled.div`
-  /* opacity: 0;
-  transform: translateY(-10vh); */
+
   position: relative;
   transition: 1s;
   background-color: #fff;

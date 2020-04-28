@@ -361,12 +361,12 @@ justify-content: center; */
     /* screen width is less than 450px (small) */
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
-  grid-gap: 40px;
+    grid-gap: 40px;
   `}
 `;
 const Container = styled.div`
 width: 100%;
-height: 50vh;
+/* height: 50vh; */
 background-color: #fff;
 padding: 10vh 0;
 margin-bottom: 20vh;
@@ -394,4 +394,9 @@ const MongoDB = styled.div`
     width: 250px;
     margin: 0 auto;
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    width: 100%;
+    margin-top: 5vhpx;
+  `}
 `;

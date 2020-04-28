@@ -23,6 +23,10 @@ export default SubscribeContainer;
 const Container = styled.div`
   background-color: #f8f2ff;
   z-index: 20;
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+     display:none;
+  `}
 `;
 const SubContainer = styled.div`
   width: 100vw;

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const ExpCards = ({
   timeline,
@@ -107,6 +108,15 @@ const ExpOutter = styled.div`
   &:hover::before {
     height: 180%;
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    width: 70%;
+    margin: 1vh 2vw;
+    h4,h2, p {
+      padding-left:5vw;   
+  }
+ 
+  `}
 `;
 const ExpDetail = styled.div`
   /* opacity: 0;
@@ -145,4 +155,10 @@ transform: translateY(-10vh);
     opacity: 0;
     display:none;
 `}
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    width:  70%;
+    height: 60vh;
+    transform: translateX(2vw) translateY(-5vh);
+  `}
 `;
