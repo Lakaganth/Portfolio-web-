@@ -204,7 +204,7 @@ const MobileNavbar = styled.div`
     /* screen width is less than 450px (small) */
     display:flex;    
     position:relative;
-    
+    width:100vw;
     .menuButton{
        justify-content: flex-end;      
         position: absolute;
@@ -217,7 +217,7 @@ const MobileNavbar = styled.div`
       top:10px;
       left:30px;
       img{
-        width:80px;
+        width:50%;
         height:80%;
       }
     }
