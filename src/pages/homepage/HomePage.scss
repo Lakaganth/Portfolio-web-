@@ -75,6 +75,9 @@
 }
 
 @media (max-width: 425px) {
+  .lines-dot {
+    display: none;
+  }
   .hero-container {
     position: relative;
     width: 100vw;
@@ -128,23 +131,25 @@
         margin: 5vh;
         padding: -5vh 0 0 -5vw;
         transition: all 0.2s ease-in-out;
-        transform: scale(0.5) translateX(-32vw) translateY(3vh);
+        transform: scale(0.4) translateX(-32vw) translateY(-220vh);
       }
       position: relative;
     }
     svg {
       position: absolute;
-      z-index: -5;
+      top: -50vh;
+      left: 0;
+      z-index: -10;
       transition: all 0.2s ease-in-out;
-      transform: scale(0.8) translateX(-32vw) translateY(0vh);
+      transform: scale(0.5) translateX(-32vw) translateY(-88vh);
       // width: 893px;
     }
   }
   .hero-img:hover {
-    transform: scale(1);
+    transform: scale(0.5);
 
     svg {
-      transform: scale(1);
+      transform: scale(0.5);
     }
   }
   .wave-1 {
