@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-
-import ContactAvatar from "../../assets/images/ContactLogos/contact_avatar.svg";
+import media from "styled-media-query";
+import ContactAvatar from "../../assets/images/ContactLogos/contact.png";
 import Footer from "../../components/UI/footer/Footer";
 
 const ContactPage = () => {
@@ -26,7 +26,7 @@ const ContactPage = () => {
               name="name"
               value={name}
               placeholder="Name"
-              onChange={name => setName(name.target.value)}
+              onChange={(name) => setName(name.target.value)}
             />
           </InputGroup>
           <InputGroup>
@@ -36,7 +36,7 @@ const ContactPage = () => {
               name="email"
               value={email}
               placeholder="Email"
-              onChange={email => setEmail(email.target.value)}
+              onChange={(email) => setEmail(email.target.value)}
             />
           </InputGroup>
 
@@ -46,7 +46,7 @@ const ContactPage = () => {
               name="subject"
               value={subject}
               placeholder="Subject"
-              onChange={subject => setSubject(subject.target.value)}
+              onChange={(subject) => setSubject(subject.target.value)}
             />
           </InputGroup>
           <InputGroup>
@@ -55,7 +55,7 @@ const ContactPage = () => {
               name="message"
               value={message}
               placeholder="Message"
-              onChange={message => setMessage(message.target.value)}
+              onChange={(message) => setMessage(message.target.value)}
             />
           </InputGroup>
           <button>Submit</button>
@@ -75,12 +75,24 @@ const Columns = styled.div`
   display: grid;
   grid-template-columns: repeat(2, auto);
   padding: 20vh 10vw;
-  /* justify-content: center;
-  align-content: center; */
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+     display:flex;
+     flex-direction:column;
+     
+  `}
 `;
 const ContactAvatarDiv = styled.div`
   width: 100%;
   height: 100%;
+  justify-content: flex-end;
+  align-content: flex-end;
+  border-radius: 22px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
 `;
 const RightForm = styled.div`
   width: 80%;
@@ -108,6 +120,10 @@ const RightForm = styled.div`
     margin: 0 12vw;
     /* box-shadow: 6px 4px 16px -2px rgba(134, 143, 179, 1); */
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    width: 100%;
+  `}
 `;
 
 const InputGroup = styled.div`

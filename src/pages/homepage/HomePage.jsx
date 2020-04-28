@@ -185,6 +185,42 @@ const HomePage = () => {
                 />
               </svg>
             </div>
+            <div className="mobile-hero-right">
+              <div className="mobile-hero-img">
+                <svg
+                  // style={{ transform: interpBg }}
+                  width="862"
+                  height="848"
+                  viewBox="0 0 662 648"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <ellipse
+                    cx="330.785"
+                    cy="323.558"
+                    rx="330.785"
+                    ry="323.558"
+                    fill="#60319C"
+                    fillOpacity="0.29"
+                  />
+                  <ellipse
+                    cx="330.785"
+                    cy="324.114"
+                    rx="261.848"
+                    ry="256.289"
+                    fill="#A780DA"
+                    fillOpacity="0.3"
+                  />
+                  <circle
+                    cx="330.785"
+                    cy="324.114"
+                    r="181.793"
+                    fill="#B99DDD"
+                  />
+                </svg>
+                <img src={LakaProfile} alt="laka-profile" />
+              </div>
+            </div>
             <Link to="/projects">
               <button className="project-button">Projects</button>
             </Link>
