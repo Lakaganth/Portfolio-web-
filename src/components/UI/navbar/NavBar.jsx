@@ -217,7 +217,7 @@ const MobileNavbar = styled.div`
       top:10px;
       left:30px;
       img{
-        width:80%;
+        width:40%;
         /* height:80%; */
       }
     }
