@@ -75,11 +75,11 @@ const SamAuto = () => {
         <ProjHeroGrid>
           <div className="hero-vid">
             <div className="youtube">
-              <YouTube videoId="RlEgDQLz_1Y" opts={opts} />
+              <YouTube videoId="z3EdIQ0M32o" opts={opts} />
             </div>
             <div className="youtube-mobile">
               <YouTube
-                videoId="RlEgDQLz_1Y"
+                videoId="z3EdIQ0M32o"
                 opts={optsMobile}
                 //   onReady={this._onReady}
               />

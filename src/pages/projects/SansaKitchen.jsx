@@ -18,7 +18,8 @@ import { animated, useSpring } from "react-spring";
 
 import HeroImg from "../../assets/images/Projects/sansakitchen/hero.png";
 import IntroImage from "../../assets/images/Projects/sansakitchen/intro-image.png";
-import ShowcaseBG from "../../assets/images/Projects/sansakitchen/showcasebg1.png";
+import ShowcaseBG from "../../assets/images/Projects/sansakitchen/showcasebg.png";
+import ShowcaseScreen from "../../assets/images/Projects/sansakitchen/showcase-screens.png";
 import Native from "../../assets/images/Projects/sansakitchen/native.svg";
 import Redux from "../../assets/images/Projects/sansakitchen/redux.svg";
 import Styled from "../../assets/images/Projects/sansakitchen/styled.svg";
@@ -135,14 +136,14 @@ export const SansaKitchen = () => {
         </div>
       </ProjectIntro>
       <ScreenShowcase>
-        <img className="app-screens" src={ShowcaseBG} alt="Sansa Screens" />
+        <img className="app-bg" src={ShowcaseBG} alt="Sansa Screens" />
+        <img className="app-screens" src={ShowcaseScreen} alt="Sansa Screens" />
       </ScreenShowcase>
       <Packages>
         <p className="package-title">Packages</p>
         <div className="icon-list">
           <div className="native">
             <img src={Native} alt="Native" />
-
             <p>React Native</p>
           </div>
           <div className="styled">
@@ -374,14 +375,27 @@ export const ProjectIntro = styled.div`
 
 export const ScreenShowcase = styled.div`
   width: 100vw;
-  /* height: 120vh; */
-  background: url("../../assets/images/Projects/sansakitchen/showcasebg.png")
-    cover;
   position: relative;
   .app-screens {
     z-index: 5;
+    width: 80%;
+    position: absolute;
+    top: 10vh;
+    left: 15vw;
+  }
+  .app-bg {
     width: 100%;
   }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    .app-screens {
+    z-index: 5;
+    width: 100%;
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+  }
+  `}
 `;
 
 export const Packages = styled.div`
