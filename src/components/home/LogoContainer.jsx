@@ -11,6 +11,7 @@ import Mongo from "../../assets/images/tectLogos/mongodb.svg";
 const LogoContainer = () => {
   return (
     <Container>
+      <h2>Technology Stack</h2>
       <LogoBox>
         <div className="react">
           <img src={ReactLogo} alt="React" />
@@ -363,16 +364,32 @@ justify-content: center; */
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px;
   `}
+  ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+  `}
 `;
 const Container = styled.div`
-width: 100%;
-/* height: 50vh; */
-background-color: #fff;
-padding: 10vh 0;
-margin-bottom: 20vh;
-/* ${LogoBox}:hover {
-  transform: ;
-} */
+  width: 100%;
+  background-color: #fff;
+  padding: 10vh 0;
+  margin-bottom: 20vh;
+  h2 {
+    text-align: center;
+    font-size: 42px;
+    color: #282828;
+    padding: 2rem 0 2rem 0;
+  }
+  ${media.lessThan("small")`
+    /* screen width is less than 450px (small) */
+    margin-bottom: 5vh;
+  `}
+  ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    margin-bottom: 5vh;
+  `}
 `;
 
 const NodeDiv = styled.div`
@@ -397,6 +414,11 @@ const MongoDB = styled.div`
   ${media.lessThan("small")`
     /* screen width is less than 450px (small) */
     width: 100%;
-    margin-top: 5vhpx;
+    margin-top: 5vh;
+  `}
+  ${media.between("small", "780px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    width: 100%;
+    margin-top: 5vh;
   `}
 `;

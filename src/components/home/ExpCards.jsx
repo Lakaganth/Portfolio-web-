@@ -60,6 +60,7 @@ const ExpOutter = styled.div`
   height: 25vh;
   background-color: #fff;
   margin: 5vh 0;
+  padding: 0 2vw 0 0;
   display: flex;
   justify-content: space-around;
   align-items: center;

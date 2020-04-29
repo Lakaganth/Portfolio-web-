@@ -4,26 +4,27 @@ import media from "styled-media-query";
 
 const Footer = () => {
   const Container = styled.div`
-    height: 35vh;
     background-color: #532deb;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    p {
+      color: #fff;
+      padding: 10vh 0 2vh 0;
+      text-align: center;
+    }
     div {
       padding-top: 5vh;
     }
     ${media.lessThan("small")`
     /* screen width is less than 450px (small) */
-    display:none;
+    /* display:none; */
   `}
   `;
   const IconContainer = styled.div`
-    width: 500px;
-    height: 50px;
-    margin: 0 auto;
-    transform: translateY(20vh);
-    svg {
-      margin: 0 1vw;
-    }
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-content: center;
   `;
 
   return (
@@ -100,6 +101,7 @@ const Footer = () => {
           </svg>
         </a>
       </IconContainer>
+      <p>&copy; Designed and Developed by Lakshmi Mohan</p>
     </Container>
   );
 };

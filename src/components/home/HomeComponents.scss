@@ -5,3 +5,16 @@
 .headphones {
   transform: translate3d(10vw, -18vh, 0);
 }
+
+@media (max-width: 425px) {
+  .coffee {
+    transform: translate3d(60vw, -18vh, 0);
+  }
+
+  .headphones {
+    transform: translate3d(40vw, -10vh, 0);
+  }
+  .notepad {
+    transform: translate3d(10vw, 0vh, 0);
+  }
+}
