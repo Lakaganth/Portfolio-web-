@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "../../components/UI/navbar/NavBar";
 import styled from "styled-components";
 import media from "styled-media-query";
 import ProjectList from "../../components/projects/ProjectList";
@@ -9,7 +8,6 @@ import SansaRec from "../../assets/images/Projects/list_images/sansarec.png";
 import Inventory from "../../assets/images/Projects/list_images/inventory.png";
 import Sos from "../../assets/images/Projects/list_images/sos.png";
 import Petsgram from "../../assets/images/Projects/list_images/petsgram.png";
-import BGlines from "../../assets/images/Projects/list_images/bglines.png";
 
 export const ProjectPage = () => {
   const samTechArr = ["NextJs", "React", "Firebase", "SSR", "StyledComponents"];

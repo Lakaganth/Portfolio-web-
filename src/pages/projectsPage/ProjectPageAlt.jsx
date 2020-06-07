@@ -122,7 +122,7 @@ export const ProjectCard = ({
         </div>
       </div>
       <Link to={projectPath}>
-        <button className="read-more">Read More</button>
+        <button className="read-more">Read More...</button>
       </Link>
     </Card>
   );
@@ -158,14 +158,37 @@ const Card = styled.div`
   border: 10px solid #ccc;
   text-decoration: none;
 
+  .project-hero-img {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    /* overflow: hidden; */
+    img {
+      padding: 10px;
+      position: absolute;
+      /* animation: animate-image 1s linear infinite; */
+      /* top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0; */
+    }
+  }
+
   .read-more {
     width: 100%;
     padding: 10px;
     height: 50px;
     border: none;
     font-size: 24px;
-    visibility: hidden;
+    justify-self: flex-start;
     transition: all, 0.5s;
+    background: white;
+    border-radius: 5px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   }
 

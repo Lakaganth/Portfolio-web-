@@ -13,7 +13,6 @@ const ProjectList = ({
   bgColor,
   routeName,
 }) => {
-  console.log(bgColor);
   return (
     <Container>
       <Hero className="hero" bgColor={bgColor}>
