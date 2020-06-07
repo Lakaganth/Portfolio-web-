@@ -25,9 +25,9 @@ import Flutter from "../../assets/images/Projects/petsgram/flutter.png";
 import Feature1Img from "../../assets/images/Projects/petsgram/feature1.png";
 import Feature2Img from "../../assets/images/Projects/petsgram/feature2.png";
 import Feature3Img from "../../assets/images/Projects/petsgram/feature3.png";
-import Feature41Img from "../../assets/images/Projects/sansakitchen/feature4-1.png";
-import Feature42Img from "../../assets/images/Projects/sansakitchen/feature4-2.png";
-import Feature43Img from "../../assets/images/Projects/sansakitchen/feature4-3.png";
+import Feature41Img from "../../assets/images/Projects/petsgram/feature4-1.png";
+import Feature42Img from "../../assets/images/Projects/petsgram/feature4-2.png";
+import Feature43Img from "../../assets/images/Projects/petsgram/feature4-3.png";
 import Footer from "./../../components/UI/footer/Footer";
 
 export const Petsgram = () => {
@@ -109,18 +109,18 @@ export const Petsgram = () => {
         </div>
         <div className="intro-text">
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Petsgram is free, online photo sharing mobile app and social network
+            app developed using Flutter. The inspiration for the app is from
+            Instagram and the main idea for this app is to create a social media
+            platform for users to share their pets images with their friends
+            whom they can follow.
           </p>
           <p>
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            Users will be able to upload images, follow other users, like thier
+            followers images and comment on them. All interactions are real time
+            and uses Google Firebase to achieve this. Users will be able to edit
+            and upload high res photos to the app and view others upload throuh
+            their feed.
           </p>
         </div>
       </ProjectIntro>
@@ -153,18 +153,22 @@ export const Petsgram = () => {
             Awesomeness
           </h6>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            This mobile app powered by the Google's open source software
+            development kit Flutter using the Dart language. This app is
+            cross-platform and available to both Apple iOS and Google Android
+            devices. Any 2D-based UI can be implemented in Flutter without
+            interacting with a native application counterpart.Aside from that,
+            Flutter provides a declarative API for building UI, which, in my
+            experience, noticeably boosts the performance. This is most obvious
+            when it comes to visual adjustments.
           </p>
           <p>
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            Flutter doesn’t rely on any intermediate code representations or
+            interpretation. Flutter application is built directly into the
+            machine code, which eliminates any performance bugs of the
+            interpretation process. So its safe to say that Flutter application
+            performance in most cases will be indistinguishable from the native
+            app and even better in complex UI animation scenarios.
           </p>
         </div>
         <animated.div className="feature1-image" style={F1Animation}>
@@ -180,47 +184,42 @@ export const Petsgram = () => {
           </animated.div>
         </div>
         <div className="feature2-text">
-          <h6>
-            Firebase and
-            <br />
-            Redux
-          </h6>
+          <h6>Firebase - The Backbone</h6>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Firebase is an amazing tool that removes the requirement for having
+            an authentication server locally or on your private cloud. It has
+            its own cloud and syncs your user data in realtime and securely.
+            Firebase will run the end to end authentication process and free you
+            to make your application a better user experience.
           </p>
           <p>
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            Firebase Console is one of the best features of this platform. This
+            console is one point stop for all monitoring and troubleshooting
+            purposes. You can view data from all of your connected applications
+            and make and changes in realtime from the console itself. Best use
+            on Sending push notifications in real time.
           </p>
         </div>
       </Feature2>
       <Feature3>
         <div className="feature3-text">
           <h6>
-            Firebase and
+            UI/UX- Fun and
             <br />
-            Redux
+            Easy
           </h6>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            The point of designing this app was to create a fun and safe space
+            to share images of our loved ones, so making sure the users are able
+            to interact with the app as easily as possible and shouldn't be able
+            to find anything complex was the priority. At the same time making
+            user interaction with other users through comments is made real
+            time.
           </p>
           <p>
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            Finding other users, interacting with them and sharing content
+            through likes and comments is easy and really fast. Encourages
+            interaction between users through image description and comments.
           </p>
         </div>
         <div className="feature3-image">
@@ -239,12 +238,13 @@ export const Petsgram = () => {
           </animated.div>
         </div>
         <div className="feature4-text">
-          <h6>Profile Screen</h6>
+          <h6>Cloud Functions</h6>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Real time notificaiton is sent to the user when a follower comments.
+            likes or follows the user using Firebase cloud trigger funcitons.
+            Mutiple functions are written which gets triggered on user actions
+            to provide smooth and real time notifications to the user even when
+            the app is not active.
           </p>
         </div>
       </Feature4>

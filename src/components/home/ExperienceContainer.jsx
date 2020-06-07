@@ -36,41 +36,30 @@ const ExperienceContainer = () => {
             timeline="2019-present"
             title="Freelance Web Developer"
             company=""
-            detail1=" There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable"
+            detail1=" Designed and built web apps, mobile apps and websites from scratch for a start-up and small business"
             detail2="
-          If you are going to use a passage of Lorem Ipsum, you need to be sure
-          there isn't anything embarrassing hidden in the middle of text."
-            detail3=" The generated Lorem Ipsum is therefore always free from repetition,
-          injected humour, or non-characteristic words etc."
+          Consult with clients to meet the design and user interface requirement and proposing the best budget to maintain and scale the projects for the future"
+            detail3=" Ensure the code meets industry standards, is valid and porperly structured along with being compatible with browsers, devisec and operating systems"
           />
           <ExpCards
             timeline="2016-2018"
             title="Frontend Web Developer"
             company="Technisoft Corp"
-            detail1=" There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable"
-            detail2="
-          If you are going to use a passage of Lorem Ipsum, you need to be sure
-          there isn't anything embarrassing hidden in the middle of text."
-            detail3=" The generated Lorem Ipsum is therefore always free from repetition,
-          injected humour, or non-characteristic words etc."
+            detail1="Developed dynamic and interactive website that ensured high traffic, page views and better user experience for the clients."
+            detail2="Helped migration to MongoDB and implement redux to current projects. Responsibile for maintaining, expanding, and scaling the site"
+            detail3="Worked with User Experience team to optimize data flow using Redux and Cooperate with web designers to match visual design intent"
+            detail4="Fixed bugs from existing websites and significantly improved functionality and speed"
+            // detail5="Worked with User Experience team to optimize data flow using Redux"
           />
 
           <ExpCards
             timeline="2012-2016"
-            title="Team Lead - Customer Support"
+            title="Team Lead - Business Process Improvement"
             company="Groupon"
-            detail1=" There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable"
+            detail1=" Lead a team of 6 customer service reps and quality analyst to derive best practices and methods to improve performance like productivity, quality and CSAT"
             detail2="
-          If you are going to use a passage of Lorem Ipsum, you need to be sure
-          there isn't anything embarrassing hidden in the middle of text."
-            detail3=" The generated Lorem Ipsum is therefore always free from repetition,
-          injected humour, or non-characteristic words etc."
+            Displayed problem solving skills through escalation calls and resolving customer issues effectively with beign beneficial for both customer and the organisation"
+            detail3=" Document new ideas and conduct test on reading the results of such ideas and presting to the stakeholders"
           />
         </div>
         <div className="right-col">
@@ -187,14 +176,10 @@ const Container = styled.div`
 `;
 
 const ExpContainer = styled.div`
-  /* box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.43); */
-
   overflow: hidden;
-  /* transition: 1s; */
 `;
 
 const ExpDetail = styled.div`
-
   position: relative;
   transition: 1s;
   background-color: #fff;

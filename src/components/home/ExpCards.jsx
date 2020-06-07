@@ -9,13 +9,15 @@ export const ExpCards = ({
   detail1,
   detail2,
   detail3,
+  detail4,
+  detail5,
 }) => {
   const [showOne, setShowOne] = useState(false);
   const handleOne = () => {
     setShowOne(!showOne);
   };
   return (
-    <ExpContainer>
+    <ExpContainer onClick={handleOne}>
       <ExpOutter className="expone" showOne={showOne}>
         <div>
           <h4>{timeline}</h4>
@@ -44,6 +46,8 @@ export const ExpCards = ({
         <p>{detail1}</p>
         <p>{detail2}</p>
         <p>{detail3}</p>
+        {detail4 && <p>{detail4}</p>}
+        {detail5 && <p>{detail5}</p>}
       </ExpDetail>
     </ExpContainer>
   );
@@ -53,6 +57,7 @@ export default ExpCards;
 
 const ExpContainer = styled.div`
   overflow: hidden;
+  cursor: pointer;
 `;
 
 const ExpOutter = styled.div`

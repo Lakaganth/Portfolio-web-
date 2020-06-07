@@ -29,7 +29,7 @@ const Container = styled.div`
   `}
 `;
 const SubContainer = styled.div`
-  width: 100vw;
+  width: 60vw;
   /* height: 297px; */
   background-color: #fff;
   margin: 0 auto;

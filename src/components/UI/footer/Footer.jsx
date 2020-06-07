@@ -7,13 +7,14 @@ const Footer = () => {
     background-color: #532deb;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    width: 100vw;
     p {
       color: #fff;
       padding: 10vh 0 2vh 0;
       text-align: center;
     }
     div {
-      padding-top: 5vh;
+      padding-top: 15vh;
     }
     ${media.lessThan("small")`
     /* screen width is less than 450px (small) */

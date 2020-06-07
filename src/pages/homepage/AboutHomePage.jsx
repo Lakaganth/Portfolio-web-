@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import media from "styled-media-query";
 import LogoContainer from "../../components/home/LogoContainer";
-import PetsgramLogo from "../../assets/images/projlogos/petsgram.png";
+import PetsgramLogo from "../../assets/images/projlogos/petsgramsvg.svg";
 import InventoryLogo from "../../assets/images/projlogos/inventory.png";
 import SamLogo from "../../assets/images/projlogos/sam.png";
 import SansaLogo from "../../assets/images/projlogos/sansa.png";

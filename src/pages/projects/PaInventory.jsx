@@ -27,9 +27,9 @@ import Feature1Img from "../../assets/images/Projects/inventory/feature1.png";
 import Feature21Img from "../../assets/images/Projects/inventory/feature2-1.png";
 import Feature22Img from "../../assets/images/Projects/inventory/feature2-2.png";
 import Feature3Img from "../../assets/images/Projects/inventory/feature3.png";
-import Feature41Img from "../../assets/images/Projects/sansakitchen/feature4-1.png";
-import Feature42Img from "../../assets/images/Projects/sansakitchen/feature4-2.png";
-import Feature43Img from "../../assets/images/Projects/sansakitchen/feature4-3.png";
+import Feature41Img from "../../assets/images/Projects/inventory/feature4-1.png";
+import Feature42Img from "../../assets/images/Projects/inventory/feature4-2.png";
+import Feature43Img from "../../assets/images/Projects/inventory/feature4-3.png";
 
 export const PaInventory = () => {
   const [animF1, setAnimF1] = useState(false);
@@ -118,18 +118,20 @@ export const PaInventory = () => {
         </div>
         <div className="intro-text">
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            PA Inventory manager app is designed to handle the everyday task of
+            retail shop owners who take count of their stock and make orders
+            based on the inventory availabilty. This task is time consuming and
+            prone to error. Having the knowledge of the stock count in your
+            finger tips can come in handy specially when the product is on sale
+            or can avoid overstocking.
           </p>
           <p>
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            Initially this was developed as an React web app for a client but
+            based on feedback it seemed more appropriate as an mobile native
+            app. This app is able to use the phones camera app QR scanner
+            feature to make workflow much faster and error free. This app
+            reqiures minimal training and can be used by anyone type of stores
+            having the inventory count problem.
           </p>
         </div>
       </ProjectIntro>
@@ -169,22 +171,20 @@ export const PaInventory = () => {
         </animated.div>
         <div className="feature1-text">
           <h6>
-            Powered by <br />
-            React Native
+            Developed using <br />
+            React Native and Expo
           </h6>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Even though this app was initially developed using React for web,
+            React native paved way for new and better features for this problem.
+            This app was faster and easy to use,which made more appealing to the
+            client.
           </p>
           <p>
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            Expo offered more features out of the box like media library file
+            access and camera access. Developing cross platform was made
+            possible using react native along with ensuring speed and agility of
+            this app to work on mobiles of different screen sizes.
           </p>
         </div>
       </Feature1>
@@ -192,23 +192,23 @@ export const PaInventory = () => {
       <Feature2>
         <div className="feature2-text">
           <h6>
-            Firebase and
+            AWS and
             <br />
             Redux
           </h6>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Choosing the right backend service was critical for the project. It
+            has to be secure and fast and more importantly cost effective. AWS
+            Amplify checked all the boxes and offered more services with a pay
+            as you go model. The database is setup through GraphQL model to
+            maintain the data integrity. The app is real-time and uses
+            subscription based updates.
           </p>
           <p>
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            React redux is used for state management with the app. Calls made to
+            the AWS servers is made using Redux Thunk making them asynchronous
+            or non-blocking. Redux design pattern ensures the state is immutable
+            and the state is accesbie through all levels of the app.
           </p>
         </div>
         <div className="feature2-image">
@@ -226,35 +226,47 @@ export const PaInventory = () => {
         </div>
         <div className="feature3-text">
           <h6>
-            Firebase and
+            Secure authentication
             <br />
-            Redux
+            and fast data
           </h6>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            PA inventory app uses Amazon Cognito for authentication enabling two
+            factor authentication to user data. Amazon Cognito examines each
+            user pool sign-in attempt and generates a risk score for how likely
+            the sign-in request is to be from a malicious attacker. With
+            adaptive authentication, users continue to sign in with just their
+            password when the request has characteristics of successful sign-ins
+            in the past. Users are prompted for a second factor only when some
+            risk is detected with a sign-in request.
           </p>
           <p>
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            This app takes advantage of the highly optimized and robust GraphQL
+            data layer provided by AWS AppSync providing real-time operations by
+            pushing data to clients then and there.
           </p>
         </div>
       </Feature3>
       <Waypoint bottomOffset="50%" onEnter={() => setAnimF4(true)} />
       <Feature4>
         <div className="feature4-text">
-          <h6>Profile Screen</h6>
+          <h6>
+            Quick , Easy
+            <br />
+            and Customizable
+          </h6>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Users will be to add their inventory, update and delete them
+            anytime. QR codes for each product can be downloaded and printed.
+            Upon scanning the QR codes through the app, users will be able to
+            read or update the inventory count within seconds and removing the
+            need for navigating to screens.
+          </p>
+          <p>
+            The list can be marked as completed after order or removed from the
+            list. All the essential information is displayed on the list screen.
+            The list can be filtered based on the product categories. Email is
+            triggred on the completion of list to the user for record keeping.
           </p>
         </div>
         <div className="feature4-image">
@@ -303,6 +315,9 @@ export const ProjHeroGrid = styled.div`
       width: 680px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       margin-top: 50px;
+    }
+    .youtube-mobile {
+      display: none;
     }
   }
   ${media.lessThan("small")`

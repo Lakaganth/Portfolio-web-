@@ -120,18 +120,17 @@ export const SansaKitchen = () => {
         </div>
         <div className="intro-text">
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Deciding what to cook is more diffiult task than the actual cooking.
+            Wouldn't it be nice to get some help on deciding what to cook and
+            also help with how to cook. Ever had the trouble of loosing your
+            favorite recipe or missed that small ingredient which was going to
+            make the dish from meh to wow.
           </p>
           <p>
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            This app is answer to all. Designed and developed with personalised
+            guidance every step of the way. From recipe recommendations, to
+            adding your own recipes for others to share, Sansa kitchen has it
+            all. New recipes added every month and updates you will love.
           </p>
         </div>
       </ProjectIntro>
@@ -171,18 +170,16 @@ export const SansaKitchen = () => {
             React Native
           </h6>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Coming from web development, React Native was not much different in
+            terms of concept and was easy to start development. 60% of the code
+            is reused with the power of React components and redux.
           </p>
           <p>
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            React Navigation 5 is used for app navigation. The navigation
+            configuration like title, props and context is dynamic and all
+            happens inside the screen component. Styled component is used for
+            styling the and making sure it remains consitent through all mobile
+            screen sizes.
           </p>
         </div>
       </Feature1>
@@ -195,18 +192,19 @@ export const SansaKitchen = () => {
             Redux
           </h6>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            The database handling for the app is done using Google's Firebase
+            Firestore and the authentication using Firebase Auth. The app is
+            designed to be real time and fast using the noSQL cloud storage.
+            This app can work offline, caching the data in device memory and
+            synchronizing after connecting to the internet.
           </p>
           <p>
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            The state management within the app is done using Redux along with
+            Redux Thunk for banckend service connections. Redux ensures that the
+            state remains immutable and secure, also making the state available
+            to all levels of the components tree. With the use of redux, running
+            side effects like AJAX calls is controlled and acheived in a
+            predictable way.
           </p>
         </div>
         <div className="feature2-image">
@@ -224,23 +222,24 @@ export const SansaKitchen = () => {
         </div>
         <div className="feature3-text">
           <h6>
-            Firebase and
+            Handling user
             <br />
-            Redux
+            Submisisons
           </h6>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Users will be able to submit their own recipes for their own use and
+            once verified will be made available to other users. Users can
+            update and delete their submissions easily with just a long press.
+            Also users can favorite a recipe by the heart icon and view them in
+            the favorites screen section of the app. This enables user to make
+            the app a personlized digital cook book of their own.
           </p>
           <p>
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            Only logged in users will be able to add a new recipe. Users can
+            either select the recipe image directly from camera or their phone
+            album. The recipes are categorized and easy to access. Each recipe
+            has their image, ingridient list and instruction list with tap to
+            mark as finshed making to simple and intutive to use.
           </p>
         </div>
       </Feature3>
@@ -249,10 +248,10 @@ export const SansaKitchen = () => {
         <div className="feature4-text">
           <h6>Profile Screen</h6>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            The app can register new users and sign in existing users. Logged in
+            users can edit their display name, profile avatar and other data.
+            App is currently available in Google play store and will soon be
+            uploaded in Apple store.
           </p>
         </div>
         <div className="feature4-image">

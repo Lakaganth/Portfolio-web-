@@ -275,7 +275,7 @@ const HomePage = () => {
         </animated.div>
       </div>
 
-      <div className="wave-1">
+      {/* <div className="wave-1">
         <svg
           viewBox="100 0 1000 1800"
           fill="freeze"
@@ -300,7 +300,7 @@ const HomePage = () => {
             fillOpacity="0.3"
           />
         </svg>
-      </div>
+      </div> */}
       <AboutHomePage />
       <ExperienceContainer />
       <SubscribeContainer />

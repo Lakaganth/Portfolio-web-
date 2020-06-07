@@ -16,6 +16,7 @@ import SamAuto from "./pages/projects/SamAuto";
 import { SansaKitchen } from "./pages/projects/SansaKitchen";
 import { PaInventory } from "./pages/projects/PaInventory";
 import { Petsgram } from "./pages/projects/Petsgram";
+import { ProjectPageAlt } from "./pages/projectsPage/ProjectPageAlt";
 
 const App = withRouter(() => {
   const location = useLocation();
@@ -33,7 +34,7 @@ const App = withRouter(() => {
           <Switch location={location}>
             <Route exact path="/" component={HomePage} />
             <Route path="/about" component={AboutPage} />
-            <Route exact path="/projects" component={ProjectPage} />
+            <Route exact path="/projects" component={ProjectPageAlt} />
             <Route path="/contact" component={ContactPage} />
             <Route exact path="/blog" component={BlogPage} />
             <Route path="/blog/add" component={AddBlog} />
