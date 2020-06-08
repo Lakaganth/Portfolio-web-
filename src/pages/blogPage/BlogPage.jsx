@@ -9,6 +9,7 @@ import Markdown from "markdown-to-jsx";
 import BlogBox from "../../components/blog/BlogBox";
 import Footer from "../../components/UI/footer/Footer";
 import media from "styled-media-query";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const BlogPage = () => {
   const blogsRedux = useSelector((state) => state.blog.blogs);
@@ -19,7 +20,7 @@ const BlogPage = () => {
   const getBlogsFromRedux = async () => {
     await dispatch(Blogactions.getBlogs());
   };
-  console.log(blogsRedux);
+
   return (
     <Container>
       <svg

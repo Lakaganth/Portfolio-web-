@@ -9,67 +9,110 @@ import SosAdmin from "../../assets/images/Projects/list_images/sosadmin.png";
 import SansaRec from "../../assets/images/Projects/list_images/sansarec.png";
 import Inventory from "../../assets/images/Projects/list_images/inventory.png";
 import Sos from "../../assets/images/Projects/list_images/sos.png";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export const ProjectPageAlt = () => {
   return (
     <Container>
       <ProjectsGrid>
-        <ProjectCard
-          pHeroImg={Petsgram}
-          pTitle="Petsgram"
-          pdesc="Flutter social media mobile app"
-          techTags={["Flutter", "Firebase"]}
-          bgColor={"linear-gradient(180deg, #3DFC50 0%, #A5FFC9 100%);"}
-          tagColor={"#3DFC50"}
-          projectPath={"projects/petsgram"}
-        />
-        <ProjectCard
-          pHeroImg={Samengine}
-          pTitle="Sam Auto"
-          pdesc="Server Sider Rendered React website"
-          techTags={["React", "NextJs", "Redux"]}
-          bgColor={"linear-gradient(180deg, #3BBFC1 0%, #A3FEFF 100%);"}
-          tagColor={"#3BBFC1"}
-          projectPath={"projects/samauto"}
-        />
-        <ProjectCard
-          pHeroImg={SansaRec}
-          pTitle="Sansa Kitchen"
-          pdesc="React Native Full stack mobile app"
-          techTags={["Native", "Redux", "Firebase"]}
-          bgColor={
-            "linear-gradient(180deg, rgba(219, 0, 255, 0.35) 0%, rgba(131, 179, 250, 0.57) 100%)"
-          }
-          tagColor={"rgba(219, 0, 255, 0.35)"}
-          projectPath={"projects/sansa"}
-        />
-        <ProjectCard
-          pHeroImg={Inventory}
-          pTitle="PA Inventory"
-          pdesc="React Native productivity mobile app"
-          techTags={["Native", "AWS", "Redux"]}
-          bgColor={"linear-gradient(180deg, #3DFCFC 0%, #FFFBA5 100%);"}
-          tagColor={"#FFFBA5"}
-          projectPath={"projects/inventory"}
-        />
-        <ProjectCard
-          pHeroImg={Sos}
-          pTitle="SOS Website"
-          pdesc="Full stack Node/React dynamic website"
-          techTags={["React", "NodeJS", "GraphQL"]}
-          bgColor={"linear-gradient(180deg, #FC7E38 0%, #FFA5E6 100%)"}
-          tagColor={"#FC7E38"}
-          projectPath={"projects/sosweb"}
-        />
-        <ProjectCard
-          pHeroImg={SosAdmin}
-          pTitle="SOS Admin Web App"
-          pdesc="Full stack MERN Stack web app"
-          techTags={["React", "NodeJs", "Mongo", "Redux"]}
-          bgColor={"linear-gradient(180deg, #3CFC38 0%, #D7FFA5 100%)"}
-          tagColor={"#3CFC38"}
-          projectPath={"projects/sosadmin"}
-        />
+        <ScrollAnimation
+          animateIn="fadeInUp"
+          delay={100}
+          duration={0.5}
+          animateOnce="false"
+        >
+          <ProjectCard
+            pHeroImg={Petsgram}
+            pTitle="Petsgram"
+            pdesc="Flutter social media mobile app"
+            techTags={["Flutter", "Firebase"]}
+            bgColor={"linear-gradient(180deg, #3DFC50 0%, #A5FFC9 100%);"}
+            tagColor={"#3DFC50"}
+            projectPath={"projects/petsgram"}
+          />
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="fadeInUp"
+          delay={200}
+          duration={0.5}
+          animateOnce="false"
+        >
+          <ProjectCard
+            pHeroImg={Samengine}
+            pTitle="Sam Auto"
+            pdesc="Server Sider Rendered React website"
+            techTags={["React", "NextJs", "Redux"]}
+            bgColor={"linear-gradient(180deg, #3BBFC1 0%, #A3FEFF 100%);"}
+            tagColor={"#3BBFC1"}
+            projectPath={"projects/samauto"}
+          />
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="fadeInUp"
+          delay={300}
+          duration={0.5}
+          animateOnce="false"
+        >
+          <ProjectCard
+            pHeroImg={SansaRec}
+            pTitle="Sansa Kitchen"
+            pdesc="React Native Full stack mobile app"
+            techTags={["Native", "Redux", "Firebase"]}
+            bgColor={
+              "linear-gradient(180deg, rgba(219, 0, 255, 0.35) 0%, rgba(131, 179, 250, 0.57) 100%)"
+            }
+            tagColor={"rgba(219, 0, 255, 0.35)"}
+            projectPath={"projects/sansa"}
+          />
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="fadeInUp"
+          delay={400}
+          duration={0.5}
+          animateOnce="false"
+        >
+          <ProjectCard
+            pHeroImg={Inventory}
+            pTitle="PA Inventory"
+            pdesc="React Native productivity mobile app"
+            techTags={["Native", "AWS", "Redux"]}
+            bgColor={"linear-gradient(180deg, #3DFCFC 0%, #FFFBA5 100%);"}
+            tagColor={"#FFFBA5"}
+            projectPath={"projects/inventory"}
+          />
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="fadeInUp"
+          delay={500}
+          duration={0.5}
+          animateOnce="false"
+        >
+          <ProjectCard
+            pHeroImg={Sos}
+            pTitle="SOS Website"
+            pdesc="Full stack Node/React dynamic website"
+            techTags={["React", "NodeJS", "GraphQL"]}
+            bgColor={"linear-gradient(180deg, #FC7E38 0%, #FFA5E6 100%)"}
+            tagColor={"#FC7E38"}
+            projectPath={"projects/sosweb"}
+          />
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="fadeInUp"
+          delay={600}
+          duration={0.5}
+          animateOnce="false"
+        >
+          <ProjectCard
+            pHeroImg={SosAdmin}
+            pTitle="SOS Admin Web App"
+            pdesc="Full stack MERN Stack web app"
+            techTags={["React", "NodeJs", "Mongo", "Redux"]}
+            bgColor={"linear-gradient(180deg, #3CFC38 0%, #D7FFA5 100%)"}
+            tagColor={"#3CFC38"}
+            projectPath={"projects/sosadmin"}
+          />
+        </ScrollAnimation>
       </ProjectsGrid>
     </Container>
   );

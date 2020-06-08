@@ -23,7 +23,7 @@ const HomePage = () => {
 
   const imageSlide = useSpring({
     from: {
-      transform: `translate3d(100%,100%,0) scale(1.2)`,
+      transform: `translate3d(0,100%,0) scale(1.2)`,
       opacity: `0.8`,
     },
     transform: `translate3d(0,0,0) scale(1)`,

@@ -10,6 +10,7 @@ import Notepad from "../../assets/images/experience/notepad.png";
 import Coffee from "../../assets/images/experience/coffee.png";
 import Headphones from "../../assets/images/experience/headphone.png";
 import { ExpCards } from "./ExpCards";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const ExperienceContainer = () => {
   const [showOne, setShowOne] = useState(false);
@@ -63,18 +64,46 @@ const ExperienceContainer = () => {
           />
         </div>
         <div className="right-col">
-          <div className="laptop ">
-            <img src={Laptop} alt="laptop" />
-          </div>
-          <div className="notepad">
-            <img src={Notepad} alt="laptop" />
-          </div>
-          <div className="coffee">
-            <img src={Coffee} alt="coffee" />
-          </div>
-          <div className="headphones">
-            <img src={Headphones} alt="Headphones" />
-          </div>
+          <ScrollAnimation
+            animateIn="bounceInRight"
+            delay={100}
+            duration={0.5}
+            animateOnce="false"
+          >
+            <div className="laptop ">
+              <img src={Laptop} alt="laptop" />
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="bounceInRight"
+            delay={300}
+            duration={0.5}
+            animateOnce="false"
+          >
+            <div className="notepad">
+              <img src={Notepad} alt="laptop" />
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="bounceInRight"
+            delay={500}
+            duration={0.5}
+            animateOnce="false"
+          >
+            <div className="coffee">
+              <img src={Coffee} alt="coffee" />
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInBottomRight"
+            delay={600}
+            duration={0.5}
+            animateOnce="false"
+          >
+            <div className="headphones">
+              <img src={Headphones} alt="Headphones" />
+            </div>
+          </ScrollAnimation>
         </div>
       </div>
     </Container>

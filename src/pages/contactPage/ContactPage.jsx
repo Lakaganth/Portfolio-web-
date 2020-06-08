@@ -3,6 +3,7 @@ import styled from "styled-components";
 import media from "styled-media-query";
 import ContactAvatar from "../../assets/images/ContactLogos/contact.png";
 import Footer from "../../components/UI/footer/Footer";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const ContactPage = () => {
   const [name, setName] = React.useState("");
@@ -13,53 +14,67 @@ const ContactPage = () => {
   return (
     <Container>
       <Columns>
-        <ContactAvatarDiv>
-          <img src={ContactAvatar} alt="Contact" />
-        </ContactAvatarDiv>
-        <RightForm>
-          <h3>Get in touch</h3>
+        <ScrollAnimation
+          animateIn="fadeInLeft"
+          delay={100}
+          duration={0.5}
+          animateOnce="false"
+        >
+          <ContactAvatarDiv>
+            <img src={ContactAvatar} alt="Contact" />
+          </ContactAvatarDiv>
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="fadeInRight"
+          delay={100}
+          duration={0.5}
+          animateOnce="false"
+        >
+          <RightForm>
+            <h3>Get in touch</h3>
 
-          <InputGroup>
-            <input
-              className="name-input"
-              type="text"
-              name="name"
-              value={name}
-              placeholder="Name"
-              onChange={(name) => setName(name.target.value)}
-            />
-          </InputGroup>
-          <InputGroup>
-            <input
-              className="email-input"
-              type="text"
-              name="email"
-              value={email}
-              placeholder="Email"
-              onChange={(email) => setEmail(email.target.value)}
-            />
-          </InputGroup>
+            <InputGroup>
+              <input
+                className="name-input"
+                type="text"
+                name="name"
+                value={name}
+                placeholder="Name"
+                onChange={(name) => setName(name.target.value)}
+              />
+            </InputGroup>
+            <InputGroup>
+              <input
+                className="email-input"
+                type="text"
+                name="email"
+                value={email}
+                placeholder="Email"
+                onChange={(email) => setEmail(email.target.value)}
+              />
+            </InputGroup>
 
-          <InputGroup>
-            <input
-              type="text"
-              name="subject"
-              value={subject}
-              placeholder="Subject"
-              onChange={(subject) => setSubject(subject.target.value)}
-            />
-          </InputGroup>
-          <InputGroup>
-            <textarea
-              className="message-input"
-              name="message"
-              value={message}
-              placeholder="Message"
-              onChange={(message) => setMessage(message.target.value)}
-            />
-          </InputGroup>
-          <button>Submit</button>
-        </RightForm>
+            <InputGroup>
+              <input
+                type="text"
+                name="subject"
+                value={subject}
+                placeholder="Subject"
+                onChange={(subject) => setSubject(subject.target.value)}
+              />
+            </InputGroup>
+            <InputGroup>
+              <textarea
+                className="message-input"
+                name="message"
+                value={message}
+                placeholder="Message"
+                onChange={(message) => setMessage(message.target.value)}
+              />
+            </InputGroup>
+            <button>Submit</button>
+          </RightForm>
+        </ScrollAnimation>
       </Columns>
       <Footer />
     </Container>
@@ -75,11 +90,10 @@ const Columns = styled.div`
   display: grid;
   grid-template-columns: repeat(2, auto);
   padding: 20vh 10vw;
-  ${media.lessThan("small")`
+  ${media.between("small", "1280px")`
     /* screen width is less than 450px (small) */
      display:flex;
-     flex-direction:column;
-     
+     flex-direction:column;    
   `}
 `;
 const ContactAvatarDiv = styled.div`

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import media from "styled-media-query";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export const RoadMap = () => {
   const Container = styled.div`
@@ -325,21 +326,42 @@ export const RoadMap = () => {
             fill-opacity="0.54"
           />
         </svg>
-        <Card1>
-          <h6>2012-2016</h6>
-          <h5>Team Lead- Process Improvement</h5>
-          <p>Groupon Inc</p>
-        </Card1>
-        <Card2>
-          <h6>2016-2018</h6>
-          <h5>Frontend Developer</h5>
-          <p>Groupon Inc</p>
-        </Card2>
-        <Card3>
-          <h6>2018 - present</h6>
-          <h5>Web Developer</h5>
-          <p>Freelancer</p>
-        </Card3>
+        <ScrollAnimation
+          animateIn="fadeInRightBig"
+          delay={0}
+          duration={0.5}
+          animateOnce="false"
+        >
+          <Card1>
+            <h6>2012-2016</h6>
+            <h5>Team Lead- Process Improvement</h5>
+            <p>Groupon Inc</p>
+          </Card1>
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="fadeInLeftBig"
+          delay={200}
+          duration={0.5}
+          animateOnce="false"
+        >
+          <Card2>
+            <h6>2016-2018</h6>
+            <h5>Frontend Developer</h5>
+            <p>Groupon Inc</p>
+          </Card2>
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="fadeInRightBig"
+          delay={300}
+          duration={0.5}
+          animateOnce="false"
+        >
+          <Card3>
+            <h6>2018 - present</h6>
+            <h5>Web Developer</h5>
+            <p>Freelancer</p>
+          </Card3>
+        </ScrollAnimation>
       </Roadmap>
     </Container>
   );

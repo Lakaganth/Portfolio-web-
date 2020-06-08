@@ -10,6 +10,8 @@ import SosLogo from "../../assets/images/projlogos/sosweb.png";
 import SosAdminLogo from "../../assets/images/projlogos/sosadmin.png";
 import { Link } from "react-router-dom";
 
+import ScrollAnimation from "react-animate-on-scroll";
+
 export default function AboutHomePage() {
   const Container = styled.div`
     width: 100%;
@@ -44,6 +46,26 @@ export default function AboutHomePage() {
     align-content: center;
     justify-content: center;
 
+    .proj-link {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-self: center;
+      align-items: center;
+      margin: 0 auto;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+      transition: 0.5s;
+    }
+
+    .proj-link:hover {
+      transform: scale(1.2);
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
     ${media.lessThan("small")`
     /* screen width is less than 450px (small) */
     grid-template-columns: repeat(2, 1fr);
@@ -68,42 +90,96 @@ export default function AboutHomePage() {
           in the industry and produce clean code.
         </p>
         <ProjectLogos>
-          <div className="petsgram">
-            <Link to="/projects/petsgram">
-              <img src={PetsgramLogo} alt="PetsgramLogo" />
-            </Link>
-            <p>Petsgram</p>
-          </div>
-          <div className="inventory">
-            <Link to="/projects/inventory">
-              <img src={InventoryLogo} alt="inventory" />
-            </Link>
-            <p>PA Inventory</p>
-          </div>
-          <div className="sam">
-            <Link to="/projects/samauto">
-              <img src={SamLogo} alt="SamLogo" />
-            </Link>
-            <p>Sam Auto</p>
-          </div>
-          <div className="Sansa">
-            <Link to="/projects/sansa">
-              <img src={SansaLogo} alt="SansaLogo" />
-            </Link>
-            <p>Sansa Kitchen</p>
-          </div>
-          <div className="sosweb">
-            <Link to="/projects/sosweb">
-              <img src={SosLogo} alt="SosLogo" />
-            </Link>
-            <p>SOS Web</p>
-          </div>
-          <div className="sosadmin">
-            <Link to="/projects/sosadmin">
-              <img src={SosAdminLogo} alt="SosAdminLogo" />
-            </Link>
-            <p>SOS Admin</p>
-          </div>
+          <ScrollAnimation
+            animateIn="fadeInUp"
+            delay={100}
+            duration={0.5}
+            animateOnce="false"
+          >
+            <div className="petsgram">
+              <div className="proj-link">
+                <Link to="/projects/petsgram">
+                  <img src={PetsgramLogo} alt="PetsgramLogo" />
+                </Link>
+              </div>
+              <p>Petsgram</p>
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInUp"
+            delay={200}
+            duration={0.5}
+            animateOnce="false"
+          >
+            <div className="inventory">
+              <div className="proj-link">
+                <Link to="/projects/inventory">
+                  <img src={InventoryLogo} alt="inventory" />
+                </Link>
+              </div>
+              <p>PA Inventory</p>
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInUp"
+            delay={300}
+            duration={0.5}
+            animateOnce="false"
+          >
+            <div className="sam">
+              <div className="proj-link">
+                <Link to="/projects/samauto">
+                  <img src={SamLogo} alt="SamLogo" />
+                </Link>
+              </div>
+              <p>Sam Auto</p>
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInUp"
+            delay={400}
+            duration={0.5}
+            animateOnce="false"
+          >
+            <div className="Sansa">
+              <div className="proj-link">
+                <Link to="/projects/sansa">
+                  <img src={SansaLogo} alt="SansaLogo" />
+                </Link>
+              </div>
+              <p>Sansa Kitchen</p>
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInUp"
+            delay={500}
+            duration={0.5}
+            animateOnce="false"
+          >
+            <div className="sosweb">
+              <div className="proj-link">
+                <Link to="/projects/sosweb">
+                  <img src={SosLogo} alt="SosLogo" />
+                </Link>
+              </div>
+              <p>SOS Web</p>
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInUp"
+            delay={600}
+            duration={0.5}
+            animateOnce="false"
+          >
+            <div className="sosadmin">
+              <div className="proj-link">
+                <Link to="/projects/sosadmin">
+                  <img src={SosAdminLogo} alt="SosAdminLogo" />
+                </Link>
+              </div>
+              <p>SOS Admin</p>
+            </div>
+          </ScrollAnimation>
         </ProjectLogos>
       </AboutContainer>
       <LogoContainer />

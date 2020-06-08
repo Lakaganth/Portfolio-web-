@@ -1,21 +1,11 @@
 import React from "react";
-import styled from "styled-components";
-import * as Blogactions from "../../store/actions/BlogActions";
-import { useDispatch } from "react-redux";
+import styled, { keyframes } from "styled-components";
 import { withRouter } from "react-router-dom";
 import media from "styled-media-query";
 
-const calc = (x, y) => [
-  -(y - window.innerHeight / 4) / 20,
-  (x - window.innerWidth / 1.2) / 20,
-  1.1,
-];
-const trans = (x, y, s) =>
-  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+import bounceInUp from "react-animations/lib/bounceInUp";
 
 const BlogBox = ({ blog, history }) => {
-  const dispatch = useDispatch();
-
   const setSelectedBlog = async () => {
     // await dispatch(Blogactions.setSingleBlog(blog));
     history.push("/blog/detail", { blog });
@@ -34,9 +24,12 @@ const BlogBox = ({ blog, history }) => {
 
 export default withRouter(BlogBox);
 
+const AboutTextAnimation = keyframes`${bounceInUp}`;
+
 const Container = styled.div`
   width: 25vw;
-  /* height: 40vh; */
+  animation: 0.5s ${AboutTextAnimation};
+  animation-delay: 1;
   padding-bottom: 2vh;
   background-color: #fefefe;
   border-radius: 10px;

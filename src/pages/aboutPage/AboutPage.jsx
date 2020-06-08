@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import media from "styled-media-query";
 
 import "./AboutPage.scss";
@@ -10,6 +10,9 @@ import { RoadMap } from "../../components/about/RoadMap";
 import Testimonials from "./../../components/about/Testimonials";
 import Footer from "../../components/UI/footer/Footer";
 import { Link } from "react-router-dom";
+
+import fadeInLeftBig from "react-animations/lib/fadeInLeftBig";
+import fadeInUp from "react-animations/lib/fadeInUp";
 
 const AboutPage = () => {
   return (
@@ -124,12 +127,18 @@ const Column = styled.div`
   `}
 `;
 
+const AboutLakaAnimation = keyframes`${fadeInLeftBig}`;
+const AboutTextAnimation = keyframes`${fadeInUp}`;
+
 const LeftColumn = styled.div`
+  animation: 0.5s ${AboutLakaAnimation};
+  animation-delay: 1;
+  justify-self: flex-end;
   .about-laka {
     position: relative;
     img {
       z-index: 15;
-      transform: translateY(3vh);
+      /* transform: translateY(3vh); */
     }
   }
   ${media.lessThan("small")`
@@ -156,6 +165,7 @@ const LeftColumn = styled.div`
 const RightColumn = styled.div`
   width: 80%;
   margin: 0 auto;
+  animation: 0.5s ${AboutTextAnimation};
   h3 {
     font-size: 32px;
   }
