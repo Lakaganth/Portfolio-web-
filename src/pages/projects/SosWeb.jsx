@@ -193,6 +193,16 @@ const HeroContainer = styled.div`
     padding: 5vh 0 5vh 0vw;
   }
   `}
+  ${media.between("small", "1380px")`
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content:center;
+  align-items:center;
+  img{width:100%;}
+  .hero-content {
+    padding: 5vh 0 5vh 0vw;
+  }
+  `}
 `;
 
 export const ProjectIntro = styled.div`
@@ -221,6 +231,19 @@ export const ProjectIntro = styled.div`
   ${media.lessThan("small")`
   display: flex;
   flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  img{
+      width:100%;
+  }
+  p{
+    font-size: 24px;
+      line-height: 32px;
+  }
+  `}
+  ${media.between("small", "1280px")`
+  display: flex;
+  flex-direction: column-reverse;
   justify-content:center;
   align-items:center;
   img{
@@ -285,12 +308,17 @@ export const Packages = styled.div`
     .icon-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5vh;    
-
-  }
+    grid-gap: 5vh;     }
   .mongo {
     width: 80%;
   }
+  `}
+  ${media.between("small", "780px")`
+  padding: 5vh 00 0vh 0;
+    .icon-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5vh;     }
   `}
 `;
 
@@ -352,6 +380,13 @@ export const Feature1 = styled.div`
     transform: translate3d(0px,0px,0) scale(1);
   }
   `}
+  ${media.between("small", "1280px")`
+  display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column-reverse;
+  `}
 `;
 
 export const Feature2 = styled.div`
@@ -402,6 +437,13 @@ export const Feature2 = styled.div`
       width:100%;
     }
   `}
+  ${media.between("small", "1280px")`
+  display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+  `}
 `;
 export const Feature3 = styled.div`
   display: grid;
@@ -433,7 +475,7 @@ export const Feature3 = styled.div`
     padding: 5vh 5vw;
   }
   img {
-    /* padding: 2vh 0; */
+    width: 100%;
   }
   .feature3-image {
     align-self: end;
@@ -452,5 +494,15 @@ export const Feature3 = styled.div`
     width:100%;
     }
   }
+  `}
+  ${media.between("small", "1280px")`
+  display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    img{
+    width:100%;
+    }
   `}
 `;

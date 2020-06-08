@@ -1,8 +1,9 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import media from "styled-media-query";
 import { Link } from "react-router-dom";
 
+import ProjHero from "../../assets/images/Projects/list_images/proj.png";
 import Petsgram from "../../assets/images/Projects/list_images/petsgram.png";
 import Samengine from "../../assets/images/Projects/list_images/samengine.png";
 import SosAdmin from "../../assets/images/Projects/list_images/sosadmin.png";
@@ -11,9 +12,18 @@ import Inventory from "../../assets/images/Projects/list_images/inventory.png";
 import Sos from "../../assets/images/Projects/list_images/sos.png";
 import ScrollAnimation from "react-animate-on-scroll";
 
+import fadeInDown from "react-animations/lib/fadeInDown";
+
+const ProjImageAnimation = keyframes`${fadeInDown}`;
+
 export const ProjectPageAlt = () => {
   return (
     <Container>
+      <ProjectIntro>
+        <p>My workflow with projects</p>
+        <img src={ProjHero} alt="Prject page" />
+        <p>Have a look into my recent works</p>
+      </ProjectIntro>
       <ProjectsGrid>
         <ScrollAnimation
           animateIn="fadeInUp"
@@ -121,6 +131,39 @@ export const ProjectPageAlt = () => {
 const Container = styled.div`
   width: 100vw;
 `;
+
+const ProjectIntro = styled.div`
+  padding: 10vh 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background: #ffb000;
+  font-family: Monda;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  animation: 0.5s ${ProjImageAnimation};
+  animation-delay: 1;
+  p:nth-child(1) {
+    font-size: 42px;
+    line-height: 52px;
+    color: #fff;
+    padding: 2vh 0 5vh 0;
+  }
+  img {
+    width: 100%;
+  }
+
+  p:nth-child(3) {
+    font-size: 32px;
+    line-height: 52px;
+    color: #fff;
+    padding: 5vh 0 1vh 0;
+  }
+`;
+
 const ProjectsGrid = styled.div`
   width: 100vw;
   padding: 20vh 10vw;

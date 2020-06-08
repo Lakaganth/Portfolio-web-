@@ -261,6 +261,9 @@ export const ProjectHero = styled.div`
     /* screen width is less than 450px (small) */
     padding: 20vh 0 2vh 0 ;
   `}
+  ${media.between("small", "1280px")`
+        padding: 20vh 0 2vh 0 ;
+  `}
 `;
 
 export const ProjHeroGrid = styled.div`
@@ -289,7 +292,7 @@ export const ProjHeroGrid = styled.div`
       display: none;
     }
   }
-  ${media.lessThan("small")`
+  ${media.lessThan("650px")`
     /* screen width is less than 450px (small) */
     grid-template-columns: 1fr;
     .hero-image {
@@ -303,7 +306,8 @@ export const ProjHeroGrid = styled.div`
     }
     .hero-vid{
       justify-self: center;
-     align-self: center;
+     align-self:center;
+     
       .youtube{
         display: none;
       }
@@ -318,6 +322,48 @@ export const ProjHeroGrid = styled.div`
       }
     }
   `}
+
+  ${media.between("651px", "980px")`
+  grid-template-columns: 1fr 1fr;
+  .hero-image {
+      margin: 0vh 00vw;
+      padding-left:0vw;
+      align-self: end;
+      img{
+        width: 100%;
+        margin: 1vh 0vw;
+       }     
+    }
+  .hero-vid{
+      justify-self: center;
+     align-self: center;
+     padding: 0 10vw;
+      .youtube{
+        display: none;
+      }
+      .youtube-mobile{
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #fff;
+        height: 250px;
+        width:360px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+  `}
+  ${media.between("981px", "1280px")`
+  .hero-image {
+      margin: 0vh 00vw;
+      padding-left:0vw;
+      align-self: end;
+      img{
+        width: 100%;
+        margin: 1vh 0vw;
+       }     
+    }
+  `}
+
 `;
 
 export const ProjectIntro = styled.div`
@@ -357,6 +403,12 @@ export const ProjectIntro = styled.div`
     }
   }
   `}
+  ${media.between("small", "1280px")`
+  grid-template-columns: 1fr;
+    .intro-image img{
+      width:100%;
+    }
+  `}
 `;
 
 export const ScreenShowcase = styled.div`
@@ -379,6 +431,13 @@ export const ScreenShowcase = styled.div`
     z-index: 5;
     width: 120%;
     padding: 0vh 0 0vh 0vw;
+  }
+  `}
+  ${media.between("small", "1280px")`
+  .app-screens {
+    z-index: 5;
+    width: 120%;
+    padding: 0vh 0vw 0vh 0vw;
   }
   `}
 `;
@@ -408,8 +467,7 @@ export const Packages = styled.div`
     }
   }
   ${media.lessThan("small")`
-    /* screen width is less than 450px (small) */
-    
+   
     .icon-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -475,6 +533,18 @@ export const Feature1 = styled.div`
     transform: translate3d(0px,0,0) scale(1);
   }
   `}
+
+  ${media.between("small", "1280px")`
+  display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    img {
+    padding: 1vh 0;
+    width:90%;
+  }
+  `}
 `;
 
 export const Feature2 = styled.div`
@@ -515,6 +585,14 @@ export const Feature2 = styled.div`
     align-items:center;
     width:100%;
     flex-direction: column-reverse;
+  `}
+  ${media.between("small", "1280px")`
+  display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    flex-direction: column-reverse;   
   `}
 `;
 
@@ -559,6 +637,19 @@ export const Feature3 = styled.div`
   ${media.lessThan("small")`
     /* screen width is less than 450px (small) */
     display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    .feature3-image img{
+    width:120%;
+    /* justify-self: flex-end; */
+  }
+  `}
+  ${media.between("small", "1280px")`
+    /* screen width is between 450px and 768px (small to medium) */
+     /* screen width is less than 450px (small) */
+     display:flex;
     flex-direction: column;
     justify-content:center;
     align-items:center;
@@ -627,5 +718,15 @@ export const Feature4 = styled.div`
         display:none;
       }
     }
+  `}
+
+  ${media.between("small", "1280px")`
+   display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column-reverse;
+    width:90%;
+    margin: 0 auto;
   `}
 `;

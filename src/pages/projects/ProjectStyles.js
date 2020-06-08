@@ -55,6 +55,14 @@ export const ProjectTitle = styled.div`
       font-size: 40px;
     }
   `}
+
+  ${media.between("small", "1280px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    font-size: 40px;
+    h6{
+      font-size: 40px;
+    }
+  `}
 `;
 
 export const ProjHeroGrid = styled.div`
