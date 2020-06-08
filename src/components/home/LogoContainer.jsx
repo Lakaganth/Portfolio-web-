@@ -370,6 +370,12 @@ justify-content: center; */
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px;
   `}
+  ${media.between("781px", "1500px")`
+    /* screen width is between 450px and 768px (small to medium) */
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+  `}
 `;
 const Container = styled.div`
   width: 100%;

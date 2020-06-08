@@ -10,6 +10,7 @@ const Testimonials = () => {
     height: 100vh;
     position: relative;
     overflow: hidden;
+
     svg {
       z-index: -10;
     }
@@ -39,6 +40,9 @@ const Testimonials = () => {
       font-size: 52px;  
       padding-top: 1vh;
     }
+    .green-circle{
+      transform: translateX(-100vw) translateY(0vh);
+    } 
   `}
 
   `}
@@ -96,7 +100,7 @@ const Testimonials = () => {
   `}
     ${media.between("small", "780px")`
     /* screen width is between 450px and 768px (small to medium) */
-    width: 65vw;
+    width: 55vw;
     height: 75vh;
     h5 {
       font-size: 44px;     

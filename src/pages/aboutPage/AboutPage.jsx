@@ -100,7 +100,7 @@ const AboutPage = () => {
       </Column>
       <RoadMap />
       <Testimonials />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
@@ -126,7 +126,6 @@ const Column = styled.div`
 
 const LeftColumn = styled.div`
   .about-laka {
-    transform: translateX(10vw) translateY(-5vh);
     position: relative;
     img {
       z-index: 15;
@@ -134,7 +133,7 @@ const LeftColumn = styled.div`
     }
   }
   ${media.lessThan("small")`
-    /* screen width is less than 450px (small) */
+  
   .about-laka{
     transform: translateX(0vw) translateY(0vh);
     padding-left:20vw;
@@ -143,14 +142,14 @@ const LeftColumn = styled.div`
       width:80%;
     }
   `}
-  ${media.between("small", "780px")`
-    /* screen width is between 450px and 768px (small to medium) */
+  ${media.between("small", "1280px")`
+  /* align-self:center;
+    justify-self:center; */
     .about-laka{
-    transform: translateX(0vw) translateY(0vh);
-    padding-left:20vw;
+      width:100%;
     }
     .about-laka img{
-      width:90%;
+      width:100%;
     }
   `}
 `;
@@ -204,6 +203,15 @@ const RightColumn = styled.div`
     margin: 4vh 0;
   }
   `}
+  ${media.between("781px", "large")`
+    
+  width: 95%;
+  p {
+    font-size: 18px;
+    margin: 4vh 0;
+  }
+  `}
+
 `;
 const ButtonGroup = styled.div`
   display: flex;
@@ -233,9 +241,16 @@ const ButtonGroup = styled.div`
       font-size: 34px;
     }
   `}
-  ${media.between("small", "780px")`
+  ${media.between("small", "1280px")`
     /* screen width is between 450px and 768px (small to medium) */
     margin-bottom:5vh;
+    display: flex;
+    flex-direction:column;
+    
+    a{
+      margin-bottom:5vh;
+    }
+    
     svg{
       display:none;
     }   

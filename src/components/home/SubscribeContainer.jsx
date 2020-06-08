@@ -60,7 +60,7 @@ const SubContainer = styled.div`
   }
   button {
     margin-top: 5vh;
-    width: 10%;
+    width: 30%;
     height: 45px;
     font-family: "Monda";
     font-size: 18px;

@@ -205,7 +205,8 @@
 
 @media (max-width: 425px) {
   .lines-dot {
-    display: none;
+    // display: none;
+    width: 100%;
   }
   .hero-container {
     position: relative;
@@ -278,6 +279,75 @@
   .wave-2 {
     display: none;
   }
+  .hero-button-group {
+    display: flex;
+    flex-direction: column;
+
+    .project-button {
+      margin: 2vh 0;
+    }
+  }
+}
+
+@media (max-width: 1042px) {
+  .lines-dot {
+    display: none;
+  }
+  .hero-container {
+    position: relative;
+    width: 100vw;
+    padding-top: 20vh;
+    overflow: hidden;
+  }
+
+  .hero-section {
+    width: 100vw;
+    margin: 0 auto;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hero-right {
+    justify-self: flex-start;
+    .hero-img {
+      img {
+        max-width: 293px;
+        max-height: 350px;
+        z-index: 10;
+        margin: 5vh;
+        padding: 0vh 0 0 0vw;
+        transition: all 0.2s ease-in-out;
+        transform: scale(1.5) translateX(0vw) translateY(20vh);
+      }
+      svg {
+        position: absolute;
+        z-index: -5;
+        transition: all 0.2s ease-in-out;
+        transform: scale(0.8) translateX(-30vw) translateY(0vh);
+        // width: 893px;
+      }
+    }
+  }
+
+  .mobile-hero-right {
+    display: none;
+    position: absolute;
+    top: 10vh;
+    // right: 10vw;
+    // width: 50%;
+    img {
+      position: absolute;
+      // width: 60%;
+      // top: -90vh;
+      // right: -10vw;
+      transform: scale(0.8);
+    }
+    svg {
+      transform: scale(0.8);
+    }
+  }
+
   .hero-button-group {
     display: flex;
     flex-direction: column;

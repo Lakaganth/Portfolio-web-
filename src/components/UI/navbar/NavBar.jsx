@@ -26,11 +26,13 @@ const NavBar = () => {
   };
 
   const mobilemenuAnimation = useSpring({
-    from: {
-      transform: `translate3d(0,-100vh,0) scale(1)`,
-      opacity: `0.8`,
-    },
-    transform: `translate3d(0,0,0) scale(1)`,
+    // from: {
+    //   transform: mobileMenu ? `translate3d(0,-100vh,0) scale(1)` : ,
+    //   opacity: `0.8`,
+    // },
+    transform: mobileMenu
+      ? `translate3d(0,0,0) scale(1)`
+      : `translate3d(0,-100vh,0) scale(1)`,
     opacity: `1`,
   });
 
@@ -177,7 +179,7 @@ const Grids = styled.div`
   margin: 0 auto;
   align-items: center;
   justify-items: center;
-  ${media.lessThan("small")`
+  ${media.lessThan("650px")`
     /* screen width is less than 450px (small) */
     display:none;
   `}
@@ -185,6 +187,7 @@ const Grids = styled.div`
 
 const MobileNavbar = styled.div`
   display: none;
+
   button {
     background: none;
     border: none;
@@ -200,7 +203,7 @@ const MobileNavbar = styled.div`
     top: 0;
     left: 0;
   } */
-  ${media.lessThan("small")`
+  ${media.lessThan("650px")`
     /* screen width is less than 450px (small) */
     display:flex;    
     position:relative;
@@ -234,7 +237,13 @@ const MobileMenu = styled(animated.div)`
   align-items: center;
   width: 100vw;
   height: 80vh;
-  background: gray;
+  border-radius: 0px 0px 25px 25px;
+  border: 5px black solid;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
   top: 0;
   left: 0;
   .closemenu {

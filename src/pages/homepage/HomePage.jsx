@@ -274,33 +274,6 @@ const HomePage = () => {
           </div>
         </animated.div>
       </div>
-
-      {/* <div className="wave-1">
-        <svg
-          viewBox="100 0 1000 1800"
-          fill="freeze"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M292.5 15C116.9 -29.4 24.3333 38.5 0 78V259H1436.5V107C1365.83 63.6667 1157.5 1.3 889.5 98.5C554.5 220 512 70.5 292.5 15Z"
-            fill="#E7D1F4"
-            fillOpacity="0.5"
-          />
-        </svg>
-      </div>
-      <div className="wave-2">
-        <svg
-          viewBox="200 0 1050 1900"
-          fill="freeze"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M292.5 15C116.9 -29.4 24.3333 38.5 0 78V259H1436.5V107C1365.83 63.6667 1157.5 1.3 889.5 98.5C554.5 220 512 70.5 292.5 15Z"
-            fill="#E7D1F4"
-            fillOpacity="0.3"
-          />
-        </svg>
-      </div> */}
       <AboutHomePage />
       <ExperienceContainer />
       <SubscribeContainer />

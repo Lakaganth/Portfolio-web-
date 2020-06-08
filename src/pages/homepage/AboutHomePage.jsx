@@ -49,7 +49,7 @@ export default function AboutHomePage() {
     grid-template-columns: repeat(2, 1fr);
     grid-gap:25px;
   `}
-    ${media.between("small", "780px")`
+    ${media.between("small", "1280px")`
     /* screen width is between 450px and 768px (small to medium) */
     grid-template-columns: repeat(3, 1fr);
     grid-gap:25px;

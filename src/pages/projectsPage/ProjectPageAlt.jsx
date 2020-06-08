@@ -55,16 +55,16 @@ export const ProjectPageAlt = () => {
         <ProjectCard
           pHeroImg={Sos}
           pTitle="SOS Website"
-          pdesc="React Native productivity mobile app"
+          pdesc="Full stack Node/React dynamic website"
           techTags={["React", "NodeJS", "GraphQL"]}
           bgColor={"linear-gradient(180deg, #FC7E38 0%, #FFA5E6 100%)"}
           tagColor={"#FC7E38"}
-          projectPath={"projects/inventory"}
+          projectPath={"projects/sosweb"}
         />
         <ProjectCard
           pHeroImg={SosAdmin}
           pTitle="SOS Admin Web App"
-          pdesc="React Native productivity mobile app"
+          pdesc="Full stack MERN Stack web app"
           techTags={["React", "NodeJs", "Mongo", "Redux"]}
           bgColor={"linear-gradient(180deg, #3CFC38 0%, #D7FFA5 100%)"}
           tagColor={"#3CFC38"}
@@ -84,12 +84,16 @@ const ProjectsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
-  ${media.lessThan("small")`
+  ${media.lessThan("980px")`
     /* screen width is less than 450px (small) */
     display: grid;
     grid-template-columns: repeat(1, 1fr);    
     padding: 20vh 3vw;
     justify-items:center;
+  `}
+  ${media.between("981px", "1400px")`
+    /* screen width is between 450px and 768px (small to medium) */
+     grid-template-columns: repeat(2, 1fr);
   `}
 `;
 

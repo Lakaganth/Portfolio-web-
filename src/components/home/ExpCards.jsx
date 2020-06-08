@@ -62,10 +62,11 @@ const ExpContainer = styled.div`
 
 const ExpOutter = styled.div`
   width: 45vw;
-  height: 25vh;
+  min-height: 25vh;
+
   background-color: #fff;
   margin: 5vh 0;
-  padding: 0 2vw 0 0;
+  padding: 2vh 2vw 2vh 5vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -127,11 +128,12 @@ const ExpOutter = styled.div`
 const ExpDetail = styled.div`
   /* opacity: 0;
   transform: translateY(-10vh); */
+  padding: 2vh 2vw;
   position: relative;
   transition: 1s;
   background-color: #fff;
   width: 45vw;
-  height: 30vh;
+  /* height: 30vh; */
   box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.43);
   p {
     font-size: 16px;
@@ -140,6 +142,7 @@ const ExpDetail = styled.div`
     position: relative;
     padding-left: 80px;
     padding-top: 2vh;
+    padding-bottom: 2vh;
   }
   p::before {
     position: absolute;

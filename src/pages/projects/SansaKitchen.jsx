@@ -274,7 +274,7 @@ export const ProjectHero = styled.div`
   padding: 15vh 0;
   ${media.lessThan("small")`
     /* screen width is less than 450px (small) */
-    padding: 5vh 0 2vh 0 ;
+    padding: 20vh 0 2vh 0 ;
   `}
 `;
 

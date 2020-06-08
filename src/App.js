@@ -17,11 +17,13 @@ import { SansaKitchen } from "./pages/projects/SansaKitchen";
 import { PaInventory } from "./pages/projects/PaInventory";
 import { Petsgram } from "./pages/projects/Petsgram";
 import { ProjectPageAlt } from "./pages/projectsPage/ProjectPageAlt";
+import { SosWeb } from "./pages/projects/SosWeb";
+import { SosAdmin } from "./pages/projects/SosAdmin";
 
 const App = withRouter(() => {
   const location = useLocation();
   const transitions = useTransition(location, (location) => location.pathname, {
-    from: { opacity: 0, transform: "translate3d(100%,0,0)" },
+    // from: { opacity: 0, transform: "translate3d(100%,0,0)" },
     enter: { opacity: 1, transform: "translate3d(0%,0,0)" },
     leave: { opacity: 0, transform: "translate3d(-50%,0,0)" },
   });
@@ -43,6 +45,8 @@ const App = withRouter(() => {
             <Route path="/projects/sansa" component={SansaKitchen} />
             <Route path="/projects/inventory" component={PaInventory} />
             <Route path="/projects/petsgram" component={Petsgram} />
+            <Route path="/projects/sosweb" component={SosWeb} />
+            <Route path="/projects/sosadmin" component={SosAdmin} />
           </Switch>
         </animated.div>
       ))}

@@ -228,13 +228,13 @@ export default SamAuto;
 export const ProjectHero = styled.div`
   background: #3bbfc1;
   width: 100%;
-  height: 110vh;
+  /* height: 110vh; */
   padding: 10vh 0;
   overflow: hidden;
 
   ${media.lessThan("small")`
     /* screen width is less than 450px (small) */
-    padding: 5vh 0 2vh 0 ;
+    padding: 20vh 0 2vh 0 ;
     img{
         width: 120%;
         margin: 0vh 0vw;
