@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import media from "styled-media-query";
 import { Waypoint } from "react-waypoint";
 import { animated, useSpring } from "react-spring";
@@ -22,6 +22,10 @@ import Feature42Img from "../../assets/images/Projects/sansakitchen/feature4-2.p
 import Feature43Img from "../../assets/images/Projects/sansakitchen/feature4-3.png";
 import YouTube from "react-youtube";
 import Footer from "../../components/UI/footer/Footer";
+
+import fadeInRight from "react-animations/lib/fadeInRight";
+import fadeInLeft from "react-animations/lib/fadeInLeft";
+import fadeInDown from "react-animations/lib/fadeInDown";
 
 const SamAuto = () => {
   const [animF1, setAnimF1] = useState(false);
@@ -225,15 +229,23 @@ const SamAuto = () => {
 
 export default SamAuto;
 
+const HeroImageAnimation = keyframes`${fadeInRight}`;
+const HeroVideoAnimation = keyframes`${fadeInLeft}`;
+const HeroTopicAnimation = keyframes`${fadeInDown}`;
+
 export const ProjectHero = styled.div`
   background: #3bbfc1;
   width: 100%;
-  /* height: 110vh; */
   padding: 10vh 0;
   overflow: hidden;
 
+  div:nth-child(1) {
+    animation: 0.5s ${HeroTopicAnimation};
+    animation-delay: 0.5;
+  }
+
   ${media.lessThan("small")`
-    /* screen width is less than 450px (small) */
+
     padding: 20vh 0 2vh 0 ;
     img{
         width: 120%;
@@ -251,6 +263,8 @@ export const ProjHeroGrid = styled.div`
 
   .hero-image {
     padding: 0vh 0;
+    animation: 0.5s ${HeroImageAnimation};
+    animation-delay: 1;
     img {
       width: 60%;
     }
@@ -259,7 +273,8 @@ export const ProjHeroGrid = styled.div`
   .hero-vid {
     justify-self: center;
     align-self: center;
-
+    animation: 0.5s ${HeroVideoAnimation};
+    animation-delay: 1;
     .youtube {
       border-radius: 10px;
       overflow: hidden;
@@ -455,8 +470,7 @@ export const SiteShowcase = styled.div`
     left: 0vw;
   }
   `}
-  ${media.between("small", "1280px")`
- 
+  ${media.between("small", "1280px")` 
   .showcase-img {
     z-index: 5;
     position: absolute;

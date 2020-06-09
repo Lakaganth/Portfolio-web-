@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import media from "styled-media-query";
 
 import HeroImg from "../../assets/images/Projects/sosweb/soshero.png";
@@ -17,6 +17,9 @@ import Firebase from "../../assets/images/tectLogos/firebase-1.svg";
 import Sass from "../../assets/images/tectLogos/sass-1.svg";
 import { ButtonGroup } from "./ProjectStyles";
 import { Link } from "react-router-dom";
+
+import fadeInUp from "react-animations/lib/fadeInUp";
+import fadeInDown from "react-animations/lib/fadeInDown";
 
 export const SosWeb = () => {
   return (
@@ -157,6 +160,10 @@ export const SosWeb = () => {
 const Container = styled.div`
   width: 100vw;
 `;
+
+const HeroImageAnimation = keyframes`${fadeInUp}`;
+const HeroAnimation = keyframes`${fadeInDown}`;
+
 const HeroContainer = styled.div`
   width: 100vw;
   display: grid;
@@ -170,9 +177,13 @@ const HeroContainer = styled.div`
   letter-spacing: 0.38em;
   img {
     justify-self: flex-end;
+    animation: 1s ${HeroImageAnimation};
+    animation-delay: 0.5;
   }
   .hero-content {
     padding: 40vh 0 40vh 10vw;
+    animation: 1s ${HeroAnimation};
+    animation-delay: 0.5;
     p:nth-child(1) {
       color: #000000;
     }

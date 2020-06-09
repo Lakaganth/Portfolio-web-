@@ -1,14 +1,11 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import YouTube from "react-youtube";
 import { Link } from "react-router-dom";
 import {
   Container,
   ProjectTitle,
   ButtonGroup,
-  //   ProjectHero,
-  //   ProjHeroGrid,
-  //   ProjIntro,
   opts,
   optsMobile,
 } from "./ProjectStyles";
@@ -30,6 +27,10 @@ import Feature3Img from "../../assets/images/Projects/inventory/feature3.png";
 import Feature41Img from "../../assets/images/Projects/inventory/feature4-1.png";
 import Feature42Img from "../../assets/images/Projects/inventory/feature4-2.png";
 import Feature43Img from "../../assets/images/Projects/inventory/feature4-3.png";
+
+import bounceInDown from "react-animations/lib/bounceInDown";
+import bounceInRight from "react-animations/lib/bounceInRight";
+import bounceInLeft from "react-animations/lib/bounceInLeft";
 
 export const PaInventory = () => {
   const [animF1, setAnimF1] = useState(false);
@@ -283,10 +284,19 @@ export const PaInventory = () => {
   );
 };
 
+const HeroTopicAnimation = keyframes`${bounceInDown}`;
+const HeroVideoAnimation = keyframes`${bounceInLeft}`;
+const HeroImageAnimation = keyframes`${bounceInRight}`;
+
 export const ProjectHero = styled.div`
   background: #acf0ff;
   width: 100vw;
   padding: 15vh 0;
+  /* h3,
+  h6 {
+    animation: 1s ${HeroTopicAnimation};
+    animation-delay: 0.5;
+  } */
   ${media.lessThan("small")`
       padding: 20vh 0 2vh 0 ;    
   `}
@@ -300,14 +310,22 @@ export const ProjHeroGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
-
+  animation: 0.5s ${HeroImageAnimation};
+    /* animation-delay: 0.5s; */
   .hero-vid,
   .hero-image {
     justify-self: center;
   }
+
+  .hero-image{
+    /* animation: 0.5s ${HeroImageAnimation};
+    animation-delay: 0.5s; */
+  }
   .hero-vid {
     justify-self: flex-end;
     align-self: flex-end;
+    /* animation: 0.5s ${HeroVideoAnimation};
+    animation-delay: 0.5s; */
 
     .youtube {
       border-radius: 10px;

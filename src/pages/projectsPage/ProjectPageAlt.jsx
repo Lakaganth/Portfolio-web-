@@ -153,7 +153,8 @@ const ProjectIntro = styled.div`
     padding: 2vh 0 5vh 0;
   }
   img {
-    width: 100%;
+    /* padding: 25%; */
+    width: 60%;
   }
 
   p:nth-child(3) {
@@ -162,6 +163,17 @@ const ProjectIntro = styled.div`
     color: #fff;
     padding: 5vh 0 1vh 0;
   }
+  ${media.lessThan("small")`
+  img {
+    width: 100%;
+  }
+  `}
+
+  ${media.between("small", "1280px")`
+  img {
+    width: 100%;
+  }
+  `}
 `;
 
 const ProjectsGrid = styled.div`

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import media from "styled-media-query";
 import YouTube from "react-youtube";
 import { Link } from "react-router-dom";
@@ -31,6 +31,9 @@ import Feature3Img from "../../assets/images/Projects/sansakitchen/feature3.png"
 import Feature41Img from "../../assets/images/Projects/sansakitchen/feature4-1.png";
 import Feature42Img from "../../assets/images/Projects/sansakitchen/feature4-2.png";
 import Feature43Img from "../../assets/images/Projects/sansakitchen/feature4-3.png";
+
+import bounceInDown from "react-animations/lib/bounceInDown";
+import bounceInUp from "react-animations/lib/bounceInUp";
 
 export const SansaKitchen = () => {
   const [animF1, setAnimF1] = useState(false);
@@ -268,10 +271,20 @@ export const SansaKitchen = () => {
   );
 };
 
+const HeroTopicAnimation = keyframes`${bounceInUp}`;
+const HeroTopic = keyframes`${bounceInDown}`;
+
 export const ProjectHero = styled.div`
   background: #bfe1f4;
   width: 100vw;
   padding: 15vh 0;
+
+  h3,
+  h6 {
+    animation: 1s ${HeroTopic};
+    animation-delay: 0.5;
+  }
+
   ${media.lessThan("small")`
     /* screen width is less than 450px (small) */
     padding: 20vh 0 2vh 0 ;
@@ -283,6 +296,7 @@ export const ProjHeroGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
+  animation: 0.5s ${HeroTopicAnimation};
 
   .hero-vid,
   .hero-image {

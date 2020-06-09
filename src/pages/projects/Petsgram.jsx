@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import media from "styled-media-query";
 import YouTube from "react-youtube";
 import { Link } from "react-router-dom";
@@ -29,6 +29,10 @@ import Feature41Img from "../../assets/images/Projects/petsgram/feature4-1.png";
 import Feature42Img from "../../assets/images/Projects/petsgram/feature4-2.png";
 import Feature43Img from "../../assets/images/Projects/petsgram/feature4-3.png";
 import Footer from "./../../components/UI/footer/Footer";
+
+import fadeInRight from "react-animations/lib/fadeInRight";
+import fadeInLeft from "react-animations/lib/fadeInLeft";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export const Petsgram = () => {
   const [animF1, setAnimF1] = useState(false);
@@ -104,26 +108,41 @@ export const Petsgram = () => {
         </ProjHeroGrid>
       </ProjectHero>
       <ProjectIntro>
-        <div className="intro-image">
-          <img src={IntroImage} alt="Petsgram Into" />
-        </div>
-        <div className="intro-text">
-          <p>
-            Petsgram is free, online photo sharing mobile app and social network
-            app developed using Flutter. The inspiration for the app is from
-            Instagram and the main idea for this app is to create a social media
-            platform for users to share their pets images with their friends
-            whom they can follow.
-          </p>
-          <p>
-            Users will be able to upload images, follow other users, like thier
-            followers images and comment on them. All interactions are real time
-            and uses Google Firebase to achieve this. Users will be able to edit
-            and upload high res photos to the app and view others upload throuh
-            their feed.
-          </p>
-        </div>
+        <ScrollAnimation
+          animateIn="fadeInLeft"
+          delay={100}
+          duration={0.5}
+          animateOnce="false"
+        >
+          <div className="intro-image">
+            <img src={IntroImage} alt="Petsgram Into" />
+          </div>
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="fadeInRight"
+          delay={100}
+          duration={0.5}
+          animateOnce="false"
+        >
+          <div className="intro-text">
+            <p>
+              Petsgram is free, online photo sharing mobile app and social
+              network app developed using Flutter. The inspiration for the app
+              is from Instagram and the main idea for this app is to create a
+              social media platform for users to share their pets images with
+              their friends whom they can follow.
+            </p>
+            <p>
+              Users will be able to upload images, follow other users, like
+              thier followers images and comment on them. All interactions are
+              real time and uses Google Firebase to achieve this. Users will be
+              able to edit and upload high res photos to the app and view others
+              upload throuh their feed.
+            </p>
+          </div>
+        </ScrollAnimation>
       </ProjectIntro>
+
       <ScreenShowcase>
         <img
           className="app-screens"
@@ -145,35 +164,51 @@ export const Petsgram = () => {
         </div>
       </Packages>
       <Waypoint bottomOffset="40%" onEnter={() => setAnimF1(true)} />
+
       <Feature1>
-        <div className="feature1-text">
-          <h6>
-            Flutter
-            <br />
-            Awesomeness
-          </h6>
-          <p>
-            This mobile app powered by the Google's open source software
-            development kit Flutter using the Dart language. This app is
-            cross-platform and available to both Apple iOS and Google Android
-            devices. Any 2D-based UI can be implemented in Flutter without
-            interacting with a native application counterpart.Aside from that,
-            Flutter provides a declarative API for building UI, which, in my
-            experience, noticeably boosts the performance. This is most obvious
-            when it comes to visual adjustments.
-          </p>
-          <p>
-            Flutter doesn’t rely on any intermediate code representations or
-            interpretation. Flutter application is built directly into the
-            machine code, which eliminates any performance bugs of the
-            interpretation process. So its safe to say that Flutter application
-            performance in most cases will be indistinguishable from the native
-            app and even better in complex UI animation scenarios.
-          </p>
-        </div>
-        <animated.div className="feature1-image" style={F1Animation}>
-          <img src={Feature1Img} alt="Feature1" />
-        </animated.div>
+        <ScrollAnimation
+          animateIn="fadeInTop"
+          delay={100}
+          duration={0.5}
+          animateOnce="false"
+        >
+          <div className="feature1-text">
+            <h6>
+              Flutter
+              <br />
+              Awesomeness
+            </h6>
+            <p>
+              This mobile app powered by the Google's open source software
+              development kit Flutter using the Dart language. This app is
+              cross-platform and available to both Apple iOS and Google Android
+              devices. Any 2D-based UI can be implemented in Flutter without
+              interacting with a native application counterpart.Aside from that,
+              Flutter provides a declarative API for building UI, which, in my
+              experience, noticeably boosts the performance. This is most
+              obvious when it comes to visual adjustments.
+            </p>
+            <p>
+              Flutter doesn’t rely on any intermediate code representations or
+              interpretation. Flutter application is built directly into the
+              machine code, which eliminates any performance bugs of the
+              interpretation process. So its safe to say that Flutter
+              application performance in most cases will be indistinguishable
+              from the native app and even better in complex UI animation
+              scenarios.
+            </p>
+          </div>
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="fadeInDown"
+          delay={100}
+          duration={0.5}
+          animateOnce="false"
+        >
+          <animated.div className="feature1-image" style={F1Animation}>
+            <img src={Feature1Img} alt="Feature1" />
+          </animated.div>
+        </ScrollAnimation>
       </Feature1>
       <Waypoint bottomOffset="90%" onEnter={() => setAnimF2(true)} />
 
@@ -266,6 +301,9 @@ export const ProjectHero = styled.div`
   `}
 `;
 
+const HeroImageAnimation = keyframes`${fadeInRight}`;
+const HeroVideoAnimation = keyframes`${fadeInLeft}`;
+
 export const ProjHeroGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -274,10 +312,14 @@ export const ProjHeroGrid = styled.div`
 
   .hero-image {
     justify-self: end;
+    animation: 0.5s ${HeroImageAnimation};
+  animation-delay: 1;
   }
   .hero-vid {
     justify-self: flex-end;
     align-self: center;
+    animation: 0.5s ${HeroVideoAnimation};
+  animation-delay: 1;
 
     .youtube {
       border-radius: 10px;

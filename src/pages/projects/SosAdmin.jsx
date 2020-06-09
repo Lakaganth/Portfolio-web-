@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import media from "styled-media-query";
 
 import HeroImg from "../../assets/images/Projects/sosadmin/sosadminhero.png";
@@ -18,6 +18,9 @@ import ReactImg from "../../assets/images/tectLogos/react.svg";
 import Apollo from "../../assets/images/tectLogos/apollo.svg";
 import Firebase from "../../assets/images/tectLogos/firebase-1.svg";
 import Sass from "../../assets/images/tectLogos/sass-1.svg";
+
+import fadeInLeftBig from "react-animations/lib/fadeInLeftBig";
+import fadeInRightBig from "react-animations/lib/fadeInRightBig";
 
 export const SosAdmin = () => {
   return (
@@ -137,6 +140,9 @@ export const SosAdmin = () => {
   );
 };
 
+const HeroImageAnimation = keyframes`${fadeInLeftBig}`;
+const HeroAnimation = keyframes`${fadeInRightBig}`;
+
 const Container = styled.div`
   width: 100vw;
 `;
@@ -161,9 +167,13 @@ const HeroContainer = styled.div`
   img {
     padding: 10vh 0 20vh 0vw;
     justify-self: center;
+    animation: 1s ${HeroImageAnimation};
+    animation-delay: 0.5;
   }
   .hero-content {
     padding: 40vh 0 40vh 10vw;
+    animation: 1s ${HeroAnimation};
+    animation-delay: 0.5;
     p:nth-child(1) {
       color: #000000;
     }
