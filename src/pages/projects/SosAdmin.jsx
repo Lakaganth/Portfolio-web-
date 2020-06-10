@@ -31,10 +31,22 @@ export const SosAdmin = () => {
           <p>Admin App</p>
           <ButtonGroup>
             <button className="project-button">
-              <Link to="/projects">Live</Link>
+              <a
+                href="https://sos-reporting-webpp.herokuapp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Live
+              </a>
             </button>
             <button className="contact-button">
-              <Link to="/contact">Code</Link>
+              <a
+                href="https://github.com/Lakaganth/SOS-RM-Tracker-"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Code
+              </a>
             </button>
           </ButtonGroup>
         </div>

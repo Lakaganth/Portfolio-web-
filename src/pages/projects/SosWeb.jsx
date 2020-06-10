@@ -30,10 +30,22 @@ export const SosWeb = () => {
           <p>Website</p>
           <ButtonGroup>
             <button className="project-button">
-              <Link to="/projects">Live</Link>
+              <a
+                href="https://schoolofsports.herokuapp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Live
+              </a>
             </button>
             <button className="contact-button">
-              <Link to="/contact">Code</Link>
+              <a
+                href="https://github.com/Lakaganth/SOS-website"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Code
+              </a>
             </button>
           </ButtonGroup>
         </div>

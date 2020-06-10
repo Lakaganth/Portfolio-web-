@@ -8,9 +8,6 @@ import {
   ProjectTitle,
   ButtonGroup,
   optsMobile,
-  //   ProjectHero,
-  //   ProjHeroGrid,
-  //   ProjIntro,
   opts,
 } from "./ProjectStyles";
 import { Waypoint } from "react-waypoint";
@@ -105,10 +102,22 @@ export const SansaKitchen = () => {
             </div>
             <ButtonGroup>
               <button className="project-button">
-                <Link to="/projects">Live</Link>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.lakshmimohan.sansa_kitchen"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live
+                </a>
               </button>
               <button className="contact-button">
-                <Link to="/contact">Code</Link>
+                <a
+                  href="https://github.com/Lakaganth/SOS-website"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Code
+                </a>
               </button>
             </ButtonGroup>
           </div>

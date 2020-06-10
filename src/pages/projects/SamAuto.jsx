@@ -4,7 +4,13 @@ import media from "styled-media-query";
 import { Waypoint } from "react-waypoint";
 import { animated, useSpring } from "react-spring";
 
-import { Container, ProjectTitle, optsMobile, opts } from "./ProjectStyles";
+import {
+  Container,
+  ProjectTitle,
+  optsMobile,
+  opts,
+  ButtonGroup,
+} from "./ProjectStyles";
 import HeroImg from "../../assets/images/Projects/samauto/heroimg.png";
 import ProjIntroImg from "../../assets/images/Projects/samauto/projintro.png";
 import Showcase from "../../assets/images/Projects/samauto/showcase.png";
@@ -88,6 +94,26 @@ const SamAuto = () => {
                 //   onReady={this._onReady}
               />
             </div>
+            <ButtonGroup>
+              <button className="project-button">
+                <a
+                  href="https://samautoshop.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live
+                </a>
+              </button>
+              <button className="contact-button">
+                <a
+                  href="https://github.com/Lakaganth/Sam-s-Auto"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Code
+                </a>
+              </button>
+            </ButtonGroup>
           </div>
           <div className="hero-image">
             <img src={HeroImg} alt="Sam" />
